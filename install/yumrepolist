@@ -1,0 +1,19 @@
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * fedora: fedora-mirror01.rbc.ru
+ * rpmfusion-free: mirror.yandex.ru
+ * rpmfusion-free-updates: mirror.yandex.ru
+ * rpmfusion-nonfree: mirror.yandex.ru
+ * rpmfusion-nonfree-updates: mirror.yandex.ru
+ * updates: fedora-mirror01.rbc.ru
+repo id                       repo name                          status
+fedora                        Fedora 10 - i386                   enabled: 11,416
+rpmfusion-free                RPM Fusion for Fedora 10 - Free    enabled:    324
+rpmfusion-free-updates        RPM Fusion for Fedora 10 - Free -  enabled:    272
+rpmfusion-nonfree             RPM Fusion for Fedora 10 - Nonfree enabled:    142
+rpmfusion-nonfree-updates     RPM Fusion for Fedora 10 - Nonfree enabled:    148
+russianfedora-fixes-updates   Russian Fedora for Fedora 10 - Fix enabled:     58
+russianfedora-free-updates    Russian Fedora for Fedora 10 - Fre enabled:     82
+russianfedora-nonfree-updates Russian Fedora for Fedora 10 - Non enabled:     14
+updates                       Fedora 10 - i386 - Updates         enabled:  7,280
+repolist: 19,736

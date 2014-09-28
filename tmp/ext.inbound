@@ -1,0 +1,4 @@
+exten => {username},1,Noop({org}-p{tel_id})
+exten => {username},n,Set(CALLERID(name)=${CALLERID(num)})
+exten => {username},n,Macro(dial{ibr},{intno},t,${EXTEN},c{tel_id})
+exten => {username},n,Hangup(17)

@@ -1,0 +1,15 @@
+;точка входа от сервера [peer:{pid}:{tel_id}] для [peer:{pid}:{tel_id}], наша организация [user:{oid}:{org}]
+[ip{tel_id}]{banned}
+t38pt_udptl=yes,redundancy,maxdatagram=1500
+type=friend
+host={host}
+username={username}
+secret={secret}
+context=inbound
+call-limit={call_limit}
+fromuser={username}
+fromdomain={host}
+canreinvite=yes
+insecure=invite
+nat=yes
+{params}

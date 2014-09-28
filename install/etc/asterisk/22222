@@ -1,0 +1,816 @@
+interface: eth0 (10.112.30.0/255.255.255.0)
+filter: (ip or ip6) and ( port 5060 )
+
+U 84.16.130.67:5060 -> 10.157.224.111:5060
+.
+................
+
+U 10.154.28.98:5060 -> 10.112.30.70:5060
+INVITE sip:89165067002@10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK5eef8154;rport.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>.
+Contact: <sip:10020@10.154.28.98>.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 102 INVITE.
+User-Agent: Asterisk PBX.
+Max-Forwards: 70.
+Date: Tue, 13 Apr 2010 23:47:44 GMT.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY.
+Supported: replaces.
+Content-Type: application/sdp.
+Content-Length: 238.
+.
+v=0.
+o=root 2289 2289 IN IP4 10.154.28.98.
+s=session.
+c=IN IP4 10.154.28.98.
+t=0 0.
+m=audio 13018 RTP/AVP 8 101.
+a=rtpmap:8 PCMA/8000.
+a=rtpmap:101 telephone-event/8000.
+a=fmtp:101 0-16.
+a=silenceSupp:off - - - -.
+a=ptime:20.
+a=sendrecv.
+
+
+U 10.112.30.70:5060 -> 10.154.28.98:5060
+SIP/2.0 401 Unauthorized.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK5eef8154;received=10.154.28.98;rport=5060.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>;tag=as5436d367.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 102 INVITE.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+WWW-Authenticate: Digest algorithm=MD5, realm="asterisk", nonce="348e80e9".
+Content-Length: 0.
+.
+
+
+U 10.154.28.98:5060 -> 10.112.30.70:5060
+ACK sip:89165067002@10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK5eef8154;rport.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>;tag=as5436d367.
+Contact: <sip:10020@10.154.28.98>.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 102 ACK.
+User-Agent: Asterisk PBX.
+Max-Forwards: 70.
+Content-Length: 0.
+.
+
+
+U 10.154.28.98:5060 -> 10.112.30.70:5060
+INVITE sip:89165067002@10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK4ea74d8c;rport.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>.
+Contact: <sip:10020@10.154.28.98>.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 103 INVITE.
+User-Agent: Asterisk PBX.
+Max-Forwards: 70.
+Authorization: Digest username="10020", realm="asterisk", algorithm=MD5, uri="sip:89165067002@10.112.30.70", nonce="348e80e9", response="2cb2ad828047fc013f231af8ddd8bb08".
+Date: Tue, 13 Apr 2010 23:47:44 GMT.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY.
+Supported: replaces.
+Content-Type: application/sdp.
+Content-Length: 238.
+.
+v=0.
+o=root 2289 2290 IN IP4 10.154.28.98.
+s=session.
+c=IN IP4 10.154.28.98.
+t=0 0.
+m=audio 13018 RTP/AVP 8 101.
+a=rtpmap:8 PCMA/8000.
+a=rtpmap:101 telephone-event/8000.
+a=fmtp:101 0-16.
+a=silenceSupp:off - - - -.
+a=ptime:20.
+a=sendrecv.
+
+
+U 10.112.30.70:5060 -> 10.154.28.98:5060
+SIP/2.0 100 Trying.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK4ea74d8c;received=10.154.28.98;rport=5060.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 103 INVITE.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Contact: <sip:89165067002@213.109.29.7>.
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 85.94.32.245:5060
+INVITE sip:89165067002@85.94.32.245 SIP/2.0.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK654667fe;rport.
+Max-Forwards: 70.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>.
+Contact: <sip:id81421@213.109.29.7>.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 102 INVITE.
+User-Agent: Asterisk PBX 1.6.0.19.
+Date: Tue, 13 Apr 2010 23:44:13 GMT.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Content-Type: application/sdp.
+Content-Length: 286.
+.
+v=0.
+o=root 616166802 616166802 IN IP4 213.109.29.7.
+s=Asterisk PBX 1.6.0.19.
+c=IN IP4 213.109.29.7.
+t=0 0.
+m=audio 11324 RTP/AVP 8 0 101.
+a=rtpmap:8 PCMA/8000.
+a=rtpmap:0 PCMU/8000.
+a=rtpmap:101 telephone-event/8000.
+a=fmtp:101 0-16.
+a=silenceSupp:off - - - -.
+a=ptime:20.
+a=sendrecv.
+
+
+U 85.94.32.245:5060 -> 10.112.30.70:5060
+SIP/2.0 407 Proxy Authentication Required.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK654667fe;received=213.109.29.7;rport=5060.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>;tag=as21627b49.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 102 INVITE.
+User-Agent: MCN SS.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces.
+Proxy-Authenticate: Digest algorithm=MD5, realm="MCN", nonce="01c791a3".
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 85.94.32.245:5060
+ACK sip:89165067002@85.94.32.245 SIP/2.0.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK654667fe;rport.
+Max-Forwards: 70.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>;tag=as21627b49.
+Contact: <sip:id81421@213.109.29.7>.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 102 ACK.
+User-Agent: Asterisk PBX 1.6.0.19.
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 85.94.32.245:5060
+INVITE sip:89165067002@85.94.32.245 SIP/2.0.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK323beb7b;rport.
+Max-Forwards: 70.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>.
+Contact: <sip:id81421@213.109.29.7>.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 103 INVITE.
+User-Agent: Asterisk PBX 1.6.0.19.
+Proxy-Authorization: Digest username="id81421", realm="MCN", algorithm=MD5, uri="sip:89165067002@85.94.32.245", nonce="01c791a3", response="71d18eeb950dedc14f3d3cd9c1251260".
+Date: Tue, 13 Apr 2010 23:44:13 GMT.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Content-Type: application/sdp.
+Content-Length: 286.
+.
+v=0.
+o=root 616166802 616166803 IN IP4 213.109.29.7.
+s=Asterisk PBX 1.6.0.19.
+c=IN IP4 213.109.29.7.
+t=0 0.
+m=audio 11324 RTP/AVP 8 0 101.
+a=rtpmap:8 PCMA/8000.
+a=rtpmap:0 PCMU/8000.
+a=rtpmap:101 telephone-event/8000.
+a=fmtp:101 0-16.
+a=silenceSupp:off - - - -.
+a=ptime:20.
+a=sendrecv.
+
+
+U 85.94.32.245:5060 -> 10.112.30.70:5060
+SIP/2.0 100 Trying.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK323beb7b;received=213.109.29.7;rport=5060.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 103 INVITE.
+User-Agent: MCN SS.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces.
+Contact: <sip:89165067002@85.94.32.245>.
+Content-Length: 0.
+.
+
+
+U 10.112.30.17:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.17:5060;branch=z9hG4bK-cc52a78.
+From: <sip:10070600@10.112.30.70>;tag=6dd6c7ccdf822e4ao0.
+To: <sip:10070600@10.112.30.70>.
+Call-ID: 103310cc-2f2a78aa@10.112.30.17.
+CSeq: 223892 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10070600",realm="asterisk",nonce="0594b9dc",uri="sip:10.112.30.70",algorithm=MD5,response="b44bcde1173e7f541454836ac1c5c5d6".
+Contact: <sip:10070600@10.112.30.17:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.17:5060
+SIP/2.0 401 Unauthorized.
+Via: SIP/2.0/UDP 10.112.30.17:5060;branch=z9hG4bK-cc52a78;received=10.112.30.17.
+From: <sip:10070600@10.112.30.70>;tag=6dd6c7ccdf822e4ao0.
+To: <sip:10070600@10.112.30.70>;tag=as07c9c627.
+Call-ID: 103310cc-2f2a78aa@10.112.30.17.
+CSeq: 223892 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+WWW-Authenticate: Digest algorithm=MD5, realm="asterisk", nonce="45335c2a".
+Content-Length: 0.
+.
+
+
+U 10.112.30.27:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.27:5060;branch=z9hG4bK-c088c231.
+From: <sip:10074600@10.112.30.70>;tag=8540a070294f8df0o0.
+To: <sip:10074600@10.112.30.70>.
+Call-ID: 621734b2-288735f7@10.112.30.27.
+CSeq: 230850 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10074600",realm="asterisk",nonce="42629f59",uri="sip:10.112.30.70",algorithm=MD5,response="a30caaf765576523d2a906d96f43761b".
+Contact: <sip:10074600@10.112.30.27:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.27:5060
+SIP/2.0 401 Unauthorized.
+Via: SIP/2.0/UDP 10.112.30.27:5060;branch=z9hG4bK-c088c231;received=10.112.30.27.
+From: <sip:10074600@10.112.30.70>;tag=8540a070294f8df0o0.
+To: <sip:10074600@10.112.30.70>;tag=as25a0b766.
+Call-ID: 621734b2-288735f7@10.112.30.27.
+CSeq: 230850 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+WWW-Authenticate: Digest algorithm=MD5, realm="asterisk", nonce="56a84560".
+Content-Length: 0.
+.
+
+
+U 10.112.30.17:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.17:5060;branch=z9hG4bK-40e0d1c0.
+From: <sip:10070600@10.112.30.70>;tag=6dd6c7ccdf822e4ao0.
+To: <sip:10070600@10.112.30.70>.
+Call-ID: 103310cc-2f2a78aa@10.112.30.17.
+CSeq: 223893 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10070600",realm="asterisk",nonce="45335c2a",uri="sip:10.112.30.70",algorithm=MD5,response="3b994ad15671c17126db5bdf945def02".
+Contact: <sip:10070600@10.112.30.17:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.29:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.29:5060;branch=z9hG4bK-cb4cf20d.
+From: 1008640 <sip:10086400@10.112.30.70>;tag=6f1187cf7c89365eo0.
+To: 1008640 <sip:10086400@10.112.30.70>.
+Call-ID: 390cabac-63b29b86@10.112.30.29.
+CSeq: 68014 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10086400",realm="asterisk",nonce="03277046",uri="sip:10.112.30.70",algorithm=MD5,response="98cb0a418cda187a08d541b3076fb463".
+Contact: 1008640 <sip:10086400@10.112.30.29:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.26:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.26:5060;branch=z9hG4bK-5b6bf722.
+From: <sip:100748@10.112.30.70>;tag=a85bc8fe41dccebbo0.
+To: <sip:100748@10.112.30.70>.
+Call-ID: 92eef6fb-eab0b043@10.112.30.26.
+CSeq: 53887 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="100748",realm="asterisk",nonce="10b0c9b6",uri="sip:10.112.30.70",algorithm=MD5,response="983de16e368ac1a9e41240e3502ecf06".
+Contact: <sip:100748@10.112.30.26:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.27:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.27:5060;branch=z9hG4bK-ee15ab82.
+From: <sip:10074600@10.112.30.70>;tag=8540a070294f8df0o0.
+To: <sip:10074600@10.112.30.70>.
+Call-ID: 621734b2-288735f7@10.112.30.27.
+CSeq: 230851 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10074600",realm="asterisk",nonce="56a84560",uri="sip:10.112.30.70",algorithm=MD5,response="0ee862e6b355e39f4d0c26334718ef33".
+Contact: <sip:10074600@10.112.30.27:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.19:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.19:5060;branch=z9hG4bK-1d2a2843.
+From: <sip:10065200@10.112.30.70>;tag=1ad2b364d1217799o0.
+To: <sip:10065200@10.112.30.70>.
+Call-ID: d1198de1-89c196a1@10.112.30.19.
+CSeq: 92122 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10065200",realm="asterisk",nonce="5a1a74e2",uri="sip:10.112.30.70",algorithm=MD5,response="f22c60921322cc6d15db4d3a8b3cbe6c".
+Contact: <sip:10065200@10.112.30.19:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.36:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.36:5060;branch=z9hG4bK-d4756f07.
+From: <sip:10121200@10.112.30.70>;tag=7773ce20d466bc06o0.
+To: <sip:10121200@10.112.30.70>.
+Call-ID: 81a85ca0-33d77ee6@10.112.30.36.
+CSeq: 64154 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10121200",realm="asterisk",nonce="7830779b",uri="sip:10.112.30.70",algorithm=MD5,response="e2dce75f8dea01d7b6ec0a689d2be399".
+Contact: <sip:10121200@10.112.30.36:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.17:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 10.112.30.17:5060;branch=z9hG4bK-40e0d1c0;received=10.112.30.17.
+From: <sip:10070600@10.112.30.70>;tag=6dd6c7ccdf822e4ao0.
+To: <sip:10070600@10.112.30.70>;tag=as07c9c627.
+Call-ID: 103310cc-2f2a78aa@10.112.30.17.
+CSeq: 223893 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Expires: 120.
+Contact: sip:10070600@10.112.30.17:5060;expires=120.
+Date: Tue, 13 Apr 2010 23:44:17 GMT.
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.29:5060
+SIP/2.0 401 Unauthorized.
+Via: SIP/2.0/UDP 10.112.30.29:5060;branch=z9hG4bK-cb4cf20d;received=10.112.30.29.
+From: 1008640 <sip:10086400@10.112.30.70>;tag=6f1187cf7c89365eo0.
+To: 1008640 <sip:10086400@10.112.30.70>;tag=as4bb5f72c.
+Call-ID: 390cabac-63b29b86@10.112.30.29.
+CSeq: 68014 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+WWW-Authenticate: Digest algorithm=MD5, realm="asterisk", nonce="0eddd436".
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.26:5060
+SIP/2.0 401 Unauthorized.
+Via: SIP/2.0/UDP 10.112.30.26:5060;branch=z9hG4bK-5b6bf722;received=10.112.30.26.
+From: <sip:100748@10.112.30.70>;tag=a85bc8fe41dccebbo0.
+To: <sip:100748@10.112.30.70>;tag=as5979b60f.
+Call-ID: 92eef6fb-eab0b043@10.112.30.26.
+CSeq: 53887 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+WWW-Authenticate: Digest algorithm=MD5, realm="asterisk", nonce="468728af".
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.27:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 10.112.30.27:5060;branch=z9hG4bK-ee15ab82;received=10.112.30.27.
+From: <sip:10074600@10.112.30.70>;tag=8540a070294f8df0o0.
+To: <sip:10074600@10.112.30.70>;tag=as25a0b766.
+Call-ID: 621734b2-288735f7@10.112.30.27.
+CSeq: 230851 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Expires: 120.
+Contact: sip:10074600@10.112.30.27:5060;expires=120.
+Date: Tue, 13 Apr 2010 23:44:17 GMT.
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.19:5060
+SIP/2.0 401 Unauthorized.
+Via: SIP/2.0/UDP 10.112.30.19:5060;branch=z9hG4bK-1d2a2843;received=10.112.30.19.
+From: <sip:10065200@10.112.30.70>;tag=1ad2b364d1217799o0.
+To: <sip:10065200@10.112.30.70>;tag=as4b971ddb.
+Call-ID: d1198de1-89c196a1@10.112.30.19.
+CSeq: 92122 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+WWW-Authenticate: Digest algorithm=MD5, realm="asterisk", nonce="6049e8a3".
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.36:5060
+SIP/2.0 401 Unauthorized.
+Via: SIP/2.0/UDP 10.112.30.36:5060;branch=z9hG4bK-d4756f07;received=10.112.30.36.
+From: <sip:10121200@10.112.30.70>;tag=7773ce20d466bc06o0.
+To: <sip:10121200@10.112.30.70>;tag=as316e7696.
+Call-ID: 81a85ca0-33d77ee6@10.112.30.36.
+CSeq: 64154 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+WWW-Authenticate: Digest algorithm=MD5, realm="asterisk", nonce="3a86fd50".
+Content-Length: 0.
+.
+
+
+U 10.112.30.29:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.29:5060;branch=z9hG4bK-6d718e06.
+From: 1008640 <sip:10086400@10.112.30.70>;tag=6f1187cf7c89365eo0.
+To: 1008640 <sip:10086400@10.112.30.70>.
+Call-ID: 390cabac-63b29b86@10.112.30.29.
+CSeq: 68015 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10086400",realm="asterisk",nonce="0eddd436",uri="sip:10.112.30.70",algorithm=MD5,response="3793b0774a7616593682a0cfd6669e12".
+Contact: 1008640 <sip:10086400@10.112.30.29:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.26:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.26:5060;branch=z9hG4bK-9ec3088f.
+From: <sip:100748@10.112.30.70>;tag=a85bc8fe41dccebbo0.
+To: <sip:100748@10.112.30.70>.
+Call-ID: 92eef6fb-eab0b043@10.112.30.26.
+CSeq: 53888 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="100748",realm="asterisk",nonce="468728af",uri="sip:10.112.30.70",algorithm=MD5,response="cad8ccc67ae41b968b25ed46c28f38b1".
+Contact: <sip:100748@10.112.30.26:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.29:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 10.112.30.29:5060;branch=z9hG4bK-6d718e06;received=10.112.30.29.
+From: 1008640 <sip:10086400@10.112.30.70>;tag=6f1187cf7c89365eo0.
+To: 1008640 <sip:10086400@10.112.30.70>;tag=as4bb5f72c.
+Call-ID: 390cabac-63b29b86@10.112.30.29.
+CSeq: 68015 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Expires: 120.
+Contact: sip:10086400@10.112.30.29:5060;expires=120.
+Date: Tue, 13 Apr 2010 23:44:17 GMT.
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.26:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 10.112.30.26:5060;branch=z9hG4bK-9ec3088f;received=10.112.30.26.
+From: <sip:100748@10.112.30.70>;tag=a85bc8fe41dccebbo0.
+To: <sip:100748@10.112.30.70>;tag=as5979b60f.
+Call-ID: 92eef6fb-eab0b043@10.112.30.26.
+CSeq: 53888 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Expires: 120.
+Contact: sip:100748@10.112.30.26:5060;expires=120.
+Date: Tue, 13 Apr 2010 23:44:17 GMT.
+Content-Length: 0.
+.
+
+
+U 10.112.30.19:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.19:5060;branch=z9hG4bK-30791d24.
+From: <sip:10065200@10.112.30.70>;tag=1ad2b364d1217799o0.
+To: <sip:10065200@10.112.30.70>.
+Call-ID: d1198de1-89c196a1@10.112.30.19.
+CSeq: 92123 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10065200",realm="asterisk",nonce="6049e8a3",uri="sip:10.112.30.70",algorithm=MD5,response="1abd01a7c20c3d2de43e1b586b338973".
+Contact: <sip:10065200@10.112.30.19:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.36:5060 -> 10.112.30.70:5060
+REGISTER sip:10.112.30.70 SIP/2.0.
+Via: SIP/2.0/UDP 10.112.30.36:5060;branch=z9hG4bK-43e2f354.
+From: <sip:10121200@10.112.30.70>;tag=7773ce20d466bc06o0.
+To: <sip:10121200@10.112.30.70>.
+Call-ID: 81a85ca0-33d77ee6@10.112.30.36.
+CSeq: 64155 REGISTER.
+Max-Forwards: 70.
+Authorization: Digest username="10121200",realm="asterisk",nonce="3a86fd50",uri="sip:10.112.30.70",algorithm=MD5,response="6e6e739ecbadf3bd09240e4018ca39a3".
+Contact: <sip:10121200@10.112.30.36:5060>;expires=120.
+User-Agent: Linksys/PAP2T-3.1.15(LS).
+Content-Length: 0.
+Allow: ACK, BYE, CANCEL, INFO, INVITE, NOTIFY, OPTIONS, REFER.
+Supported: x-sipura.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.19:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 10.112.30.19:5060;branch=z9hG4bK-30791d24;received=10.112.30.19.
+From: <sip:10065200@10.112.30.70>;tag=1ad2b364d1217799o0.
+To: <sip:10065200@10.112.30.70>;tag=as4b971ddb.
+Call-ID: d1198de1-89c196a1@10.112.30.19.
+CSeq: 92123 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Expires: 120.
+Contact: sip:10065200@10.112.30.19:5060;expires=120.
+Date: Tue, 13 Apr 2010 23:44:17 GMT.
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 10.112.30.36:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 10.112.30.36:5060;branch=z9hG4bK-43e2f354;received=10.112.30.36.
+From: <sip:10121200@10.112.30.70>;tag=7773ce20d466bc06o0.
+To: <sip:10121200@10.112.30.70>;tag=as316e7696.
+Call-ID: 81a85ca0-33d77ee6@10.112.30.36.
+CSeq: 64155 REGISTER.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Expires: 120.
+Contact: sip:10121200@10.112.30.36:5060;expires=120.
+Date: Tue, 13 Apr 2010 23:44:17 GMT.
+Content-Length: 0.
+.
+
+
+U 85.94.32.245:5060 -> 10.112.30.70:5060
+SIP/2.0 183 Session Progress.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK323beb7b;received=213.109.29.7;rport=5060.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>;tag=as49ec3f2c.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 103 INVITE.
+User-Agent: MCN SS.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces.
+Contact: <sip:89165067002@85.94.32.245>.
+Content-Type: application/sdp.
+Content-Length: 240.
+.
+v=0.
+o=root 31261 31261 IN IP4 85.94.32.245.
+s=session.
+c=IN IP4 85.94.32.245.
+t=0 0.
+m=audio 25826 RTP/AVP 8 101.
+a=rtpmap:8 PCMA/8000.
+a=rtpmap:101 telephone-event/8000.
+a=fmtp:101 0-16.
+a=silenceSupp:off - - - -.
+a=ptime:20.
+a=sendrecv.
+
+
+U 10.112.30.70:5060 -> 10.154.28.98:5060
+SIP/2.0 183 Session Progress.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK4ea74d8c;received=10.154.28.98;rport=5060.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>;tag=as706f755d.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 103 INVITE.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Contact: <sip:89165067002@213.109.29.7>.
+Content-Type: application/sdp.
+Content-Length: 260.
+.
+v=0.
+o=root 10418883 10418883 IN IP4 213.109.29.7.
+s=Asterisk PBX 1.6.0.19.
+c=IN IP4 213.109.29.7.
+t=0 0.
+m=audio 17772 RTP/AVP 8 101.
+a=rtpmap:8 PCMA/8000.
+a=rtpmap:101 telephone-event/8000.
+a=fmtp:101 0-16.
+a=silenceSupp:off - - - -.
+a=ptime:20.
+a=sendrecv.
+
+
+U 85.94.32.245:5060 -> 10.112.30.70:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK323beb7b;received=213.109.29.7;rport=5060.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>;tag=as49ec3f2c.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 103 INVITE.
+User-Agent: MCN SS.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces.
+Contact: <sip:89165067002@85.94.32.245>.
+Content-Type: application/sdp.
+Content-Length: 240.
+.
+v=0.
+o=root 31261 31262 IN IP4 85.94.32.245.
+s=session.
+c=IN IP4 85.94.32.245.
+t=0 0.
+m=audio 25826 RTP/AVP 8 101.
+a=rtpmap:8 PCMA/8000.
+a=rtpmap:101 telephone-event/8000.
+a=fmtp:101 0-16.
+a=silenceSupp:off - - - -.
+a=ptime:20.
+a=sendrecv.
+
+
+U 10.112.30.70:5060 -> 85.94.32.245:5060
+ACK sip:89165067002@85.94.32.245 SIP/2.0.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK7951547b;rport.
+Max-Forwards: 70.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>;tag=as49ec3f2c.
+Contact: <sip:id81421@213.109.29.7>.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 103 ACK.
+User-Agent: Asterisk PBX 1.6.0.19.
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 10.154.28.98:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK4ea74d8c;received=10.154.28.98;rport=5060.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>;tag=as706f755d.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 103 INVITE.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Contact: <sip:89165067002@213.109.29.7>.
+Content-Type: application/sdp.
+Content-Length: 260.
+.
+v=0.
+o=root 10418883 10418884 IN IP4 213.109.29.7.
+s=Asterisk PBX 1.6.0.19.
+c=IN IP4 213.109.29.7.
+t=0 0.
+m=audio 17772 RTP/AVP 8 101.
+a=rtpmap:8 PCMA/8000.
+a=rtpmap:101 telephone-event/8000.
+a=fmtp:101 0-16.
+a=silenceSupp:off - - - -.
+a=ptime:20.
+a=sendrecv.
+
+
+U 213.109.29.64:5060 -> 10.112.30.70:5060
+ACK sip:89165067002@213.109.29.7 SIP/2.0.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK366590e4;rport.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>;tag=as706f755d.
+Contact: <sip:10020@10.154.28.98>.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 103 ACK.
+User-Agent: Asterisk PBX.
+Max-Forwards: 70.
+Content-Length: 0.
+.
+
+
+U 213.109.29.64:5060 -> 10.112.30.70:5060
+BYE sip:89165067002@213.109.29.7 SIP/2.0.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK5a2fff57;rport.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>;tag=as706f755d.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 104 BYE.
+User-Agent: Asterisk PBX.
+Max-Forwards: 70.
+Authorization: Digest username="10020", realm="asterisk", algorithm=MD5, uri="sip:89165067002@213.109.29.7", nonce="348e80e9", response="a52669d8cfab30378211f78117387817".
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 10.154.28.98:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 10.154.28.98:5060;branch=z9hG4bK5a2fff57;received=213.109.29.64;rport=5060.
+From: "102" <sip:10020@10.112.30.70>;tag=as5457a132.
+To: <sip:89165067002@10.112.30.70>;tag=as706f755d.
+Call-ID: 5df4b4fb136b034d090af8cd7c76f7d1@10.112.30.70.
+CSeq: 104 BYE.
+User-Agent: Asterisk PBX 1.6.0.19.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces, timer.
+Content-Length: 0.
+.
+
+
+U 10.112.30.70:5060 -> 85.94.32.245:5060
+BYE sip:89165067002@85.94.32.245 SIP/2.0.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK0f91e92b;rport.
+Max-Forwards: 70.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>;tag=as49ec3f2c.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 104 BYE.
+User-Agent: Asterisk PBX 1.6.0.19.
+Proxy-Authorization: Digest username="id81421", realm="MCN", algorithm=MD5, uri="sip:89165067002@85.94.32.245", nonce="01c791a3", response="4a12e540dc72d1027d031060e9ddc4ea".
+X-Asterisk-HangupCause: Normal Clearing.
+X-Asterisk-HangupCauseCode: 16.
+Content-Length: 0.
+.
+
+
+U 85.94.32.245:5060 -> 10.112.30.70:5060
+SIP/2.0 200 OK.
+Via: SIP/2.0/UDP 213.109.29.7:5060;branch=z9hG4bK0f91e92b;received=213.109.29.7;rport=5060.
+From: "102" <sip:id81421@85.94.32.245>;tag=as3e45a94d.
+To: <sip:89165067002@85.94.32.245>;tag=as49ec3f2c.
+Call-ID: 1d2161596599c73443d2593313c59f5d@85.94.32.245.
+CSeq: 104 BYE.
+User-Agent: MCN SS.
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO.
+Supported: replaces.
+Content-Length: 0.
+.
+
+
+U 84.16.130.67:5060 -> 10.157.224.111:5060
+.
+................

@@ -1,0 +1,15 @@
+;sip-{org}-{intno} <-> ip{tel}
+[{intno}]
+username={intno}
+secret={secret}
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c{tel}
+call-limit=10
+dtmfmode=rfc2833
+;callerid=100001
+canreinvite=no
+;fromuser=100001
+{params}

@@ -1,0 +1,161 @@
+<?php
+header("Content-Type: text/html; charset=utf-8");
+define("INDEX", "/index.php");       //для ограничения прямого доступа к файлам, к которым не должно быть доступа
+define("ADMIN_STAT",'');
+session_start();
+$_SESSION['lvl'] = 9;
+ini_set('display_errors',1);
+ini_set('register_globals','Off');
+//ini_set('magic_quotes_gpc','On');
+//ini_set('magic_quotes_runtime','On');
+//ini_set('magic_quotes_sybase','On');
+//magic_quotes_gpc = Off
+require('./mods/func.php');
+require('./mods/num2str.inc.php');
+require('./memcached.php');
+require('../mpdf50/mpdf.php');
+
+require('./mods/tbl.class.php');
+require("./mods/zones.inc.php");
+require("./mods/friends.inc.php");
+require("./myexec.php");
+$h = 'localhost';
+$u = 'root';
+$p = '';
+$n = 'asterisk';
+
+$db = open_db($h,$u,$p,$n);
+
+$_err = '';
+$_q = '';
+$_n = 0;
+
+require("./mods/functions.php");
+
+$html = '';
+$body = '';
+$jq = '';
+
+$gr = get_var('gr','org');
+$act = get_var('act','');
+$do = get_var('do',0);
+//isset($_GET['gr'])  ? $gr = $_GET['gr'] : $gr='org';
+//isset($_GET['act']) ? $act = $_GET['act'] : $act='';
+//isset($_GET['do'])  ? $do = $_GET['do'] : $do='';
+
+switch($gr)
+{
+    case 'pdf':
+        require("./mods/$gr.inc.php");
+        break;
+    case 'report':
+        require("./mods/$gr.inc.php");
+        break;
+    case 'inuse':
+        require("./mods/$gr.inc.php");
+        break;
+    case 'money':
+        $hret='';
+        require("./mods/money.inc.php");
+        $body.=$hret;
+        break;
+    case 'pt':
+        $hret='';
+        require("./mods/pt.inc.php");
+        $body.=$hret;
+        break;
+    case 'dtypes':
+        $hret='';
+        require("./mods/dtypes.inc.php");
+        $body.=$hret;
+        break;
+    case 'devices':
+        $hret='';
+        require("./mods/devices.inc.php");
+        $body.=$hret;
+        break;
+    case 'sip':
+        $hret='';
+        require("./mods/sip.inc.php");
+        $body.=$hret;
+        break;
+    case 'ext':
+        $hret='';
+        require("./mods/ext.inc.php");
+        $body.=$hret;
+        break;
+    case 'sipo':
+        $hret='';
+        require("./mods/sipo.inc.php");
+        $body.=$hret;
+        break;
+    case 'exto':
+        $hret='';
+        require("./mods/exto.inc.php");
+        $body.=$hret;
+        break;
+    case 'org':
+        require("./mods/org.inc.php");
+        break;
+    case 'peer':
+        require("./mods/peer.inc.php");
+        break;
+    case 'user':
+        require("./mods/user.inc.php");
+        break;
+    case 'opts':
+        require("./mods/opts.inc.php");
+        break;
+    case 'stat':
+        require("./mods/stat.inc.php");
+        break;
+    case 'price':
+        require("./mods/price.inc.php");
+        break;
+    case 'pool':
+        require("./mods/$gr.php");
+        break;
+    case 'popt':
+        require("./mods/$gr.php");
+        break;
+    case 'iopt':
+        require("./mods/$gr.php");
+        break;
+    case 'do':
+        require("./mods/do.inc.php");
+        break;
+    case 'day':
+        require("./mods/$gr.inc.php");
+        break;
+    case 'passwd':
+        require("./mods/$gr.inc.php");
+        break;
+    case 'default':
+    default:
+        $body = 'default';
+}
+
+$f = fopen("./index.tmp.php","r");
+$index = '';
+if($f){
+    while(!feof($f))
+        $index.= fread($f,1024);
+    fclose($f);
+}
+
+$f = fopen("./menu.tmp.php","r");
+$menu = '';
+if($f){
+    while(!feof($f))
+        $menu.= fread($f,1024);
+    fclose($f);
+}
+$html.=$index;
+$html = str_replace("{menu}",$menu,$html);
+$html = str_replace("{body}",$body,$html);
+$html = str_replace("//{JQ}",$jq,$html);
+echo $html;
+
+debug();
+
+?>

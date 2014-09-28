@@ -1,0 +1,10 @@
+;;;Закоменчен очень давно
+;;;[ip{tel}]
+;;;exten => {username},1,Macro(dialip{tel},{intno})
+;;;exten => {username},n,Busy
+
+;;Из Internet=>[peer:{pid}:{peer}]=>[csip:inbound]=>[user:{oid}:{org}]=>internal
+;;[macro-dialip{tel}]
+;;exten => s,1,Goto(startdial)
+;;exten => s,n(startdial),Dial(${ARG1},100,t)
+;;exten => s,n,Noop(Fail failed)

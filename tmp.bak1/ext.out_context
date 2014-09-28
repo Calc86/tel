@@ -1,0 +1,9 @@
+
+[c{tel}]
+exten => _X.,1,Macro(dialc{tel},${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc{tel}]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip{tel}/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)

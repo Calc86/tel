@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="On explicit save action (Ctrl+S)" serverName="mxtel2">
+    <serverData>
+      <paths name="mx.xsrv.ru">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="backup" />
+            <excludedPath path="install" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="mxtel">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="backup" />
+            <excludedPath path="yii" />
+            <excludedPath path="install" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="mxtel2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="backup" />
+            <excludedPath path="install" />
+            <excludedPath path="yii" />
+            <excludedPath path="assets" />
+            <excludedPath path="protected/runtime" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
+  </component>
+</project>
+

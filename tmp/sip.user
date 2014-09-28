@@ -1,0 +1,17 @@
+;sip-{org}-{intno} <-> [context:ip{tel_id}]
+[{intno}]
+;t38pt_udptl={t38}
+t38pt_udptl=yes,redundancy,maxdatagram=1500
+username={intno}
+fromuser={intno}
+secret={secret}
+type=friend
+qualify=no
+nat={nat}
+host=dynamic
+context=c{tel_id}
+call-limit={call_limit}
+dtmfmode={dtmf}
+canreinvite={crinv}
+{access}
+{params}

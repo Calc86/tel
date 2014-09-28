@@ -1,0 +1,12 @@
+;точка входа от сервера [peer:{pid}:{name}] для [peer:{pid}:{tel}], наша организация [user:{oid}:{org}]
+[ip{tel}]
+type=friend
+host={host}
+username={username}
+secret={secret}
+context=inbound
+call-limit=10
+fromuser={username}
+canreinvite=no
+insecure=invite
+{params}

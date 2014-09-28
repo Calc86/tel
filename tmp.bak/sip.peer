@@ -1,0 +1,12 @@
+;точка входа от сервера {name} для {tel}, наша организация {org}
+[ip{tel}]
+type=friend
+host={host}
+username={username}
+secret={secret}
+context=ip{tel}
+call-limit=10
+fromuser={username}
+canreinvite=no
+insecure=invite
+{params}

@@ -1,0 +1,3 @@
+exten => {username},1,Noop({org}-{peer})
+exten => {username},n,Macro(dialip{tel},{intno})
+exten => {username},n,Busy

@@ -1,0 +1,11 @@
+
+;{org}-{peer}
+[ip{tel}]
+exten => 100001,1,Macro(dialip{tel},{intno})
+exten => 100001,n,Busy
+
+[macro-dialip{tel}]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+

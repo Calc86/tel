@@ -1,0 +1,1435 @@
+[general]
+t38pt_udptl = yes,redundancy,maxdatagram=1500
+port = 5060
+bindaddr = 0.0.0.0
+externip=213.109.29.7
+localip=10.112.30.70
+localnet=10.0.0.0/24
+localnet=172.16.0.0/16
+localnet=172.24.0.0/16
+localnet=172.28.0.0/16
+localnet=172.30.0.0/16
+localnet=192.168.0.0/16
+language=ru
+disallow=all
+allow=alaw
+allow=g729
+allow=ulaw
+dtmfmode=rfc2833
+canreinvite=yes
+context=inbound
+callerid = Unknown
+rtptimeout=120
+rtpholdtimeout=300
+alwaysauthreject=yes
+subscribecontext = internal
+
+;T38FaxUdpEC = t38UDPRedundancy
+;T38FaxUdpEC = Redunt
+
+;register
+register => 1001400:4959677581@sip.n1.ipport.net/1001400
+register => 1001401:k2a7AwLh@sip.n1.ipport.net/1001401
+register => 1023241:FsTTIb3nBY@sip.n1.ipport.net/1023241
+register => 1023242:NQVbapkFWr@sip.n1.ipport.net/1023242
+register => 1023243:w5HpKgx3b7@sip.n1.ipport.net/1023243
+register => 1007060:74956639975@sip.n1.ipport.net/1007060
+register => 1007460:74956639982@sip.n1.ipport.net/1007460
+register => 1006520:74956639958@sip.n1.ipport.net/1006520
+register => 1007480:74956639983@sip.n1.ipport.net/1007480
+;register => test:@/test
+register => 0028513669:Daq5PuMGAW@sipnet.ru/0028513669
+register => 74956385396*1:lt2yMj5nkqse@85.94.32.245/74956385396*1
+register => 74956385586*1:v9pYXwi8L3N5@85.94.32.248/74956385586*1
+register => 1012120:74956637453@sip.n1.ipport.net/1012120
+register => 1005520:74956637465@sip.n1.ipport.net/1005520
+register => 1005540:74956637472@sip.n1.ipport.net/1005540
+register => 74956385126*1:owCAItKm4ycK@85.94.32.245/74956385126*1
+;register => 100004:400001@10.154.28.98/100004
+register => 1014421:51235504@sip.n1.ipport.net/1014421
+register => 1014461:51235504@sip.n1.ipport.net/1014461
+register => id81421:uVd9QCE89BqO@85.94.32.245/id81421
+register => id81422:uVd9QCE89BqO@85.94.32.245/id81422
+register => id81423:uVd9QCE89BqO@85.94.32.245/id81423
+register => id81424:uVd9QCE89BqO@85.94.32.245/id81424
+register => 1014423:51235504@sip.n1.ipport.net/1014423
+register => 1008640:74956639986@sip.n1.ipport.net/1008640
+register => 1020540:74956467825@sip.n1.ipport.net/1020540
+register => 1024300:8KMtjAo1of@sip.n1.ipport.net/1024300
+register => 1024340:3RNAoncpMK@sip.n1.ipport.net/1024340
+register => 1020860:74956467816@sip.n1.ipport.net/1020860
+;register => 10000411:10000422@10.154.28.98/10000411
+register => 74956385097*1:TNnsS7H75AtM@85.94.32.248/74956385097*1
+register => 1014460:51235504@sip.n1.ipport.net/1014460
+register => 74956385041*1:HdH4j4koeyOc@85.94.32.248/74956385041*1
+register => 74956385042*1:bVgVGwfY6e0K@85.94.32.248/74956385042*1
+register => nitro_test:@/nitro_test
+register => 1007660:74956639985@sip.n1.ipport.net/1007660
+register => 74956385574*1:uRAWlCtYTbHs@85.94.32.248/74956385574*1
+register => 74956385453*1:sK5UqYL0GZfF@85.94.32.245/74956385453*1
+register => 74956385259*1:OWxXkPcOlNcz@85.94.32.248/74956385259*1
+register => 74956385627*1:mduKo8I2kxHZ@85.94.32.248/74956385627*1
+
+
+
+;B>G:0 2E>40 >B A5@25@0 [peer:5:p9677581_5] 4;O [peer:5:9677581_5], =0H0 >@30=870F8O [user:2:degunino]
+[ip9677581_5]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1001400
+secret=4959677581
+context=inbound
+call-limit=1
+fromuser=1001400
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:6:p9677581_6] 4;O [peer:6:9677581_6], =0H0 >@30=870F8O [user:2:degunino]
+[ip9677581_6]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1001401
+secret=k2a7AwLh
+context=inbound
+call-limit=1
+fromuser=1001401
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:40:p9677581_40] 4;O [peer:40:9677581_40], =0H0 >@30=870F8O [user:2:degunino]
+[ip9677581_40]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1023241
+secret=FsTTIb3nBY
+context=inbound
+call-limit=1
+fromuser=1023241
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:41:p9677581_41] 4;O [peer:41:9677581_41], =0H0 >@30=870F8O [user:2:degunino]
+[ip9677581_41]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1023242
+secret=NQVbapkFWr
+context=inbound
+call-limit=1
+fromuser=1023242
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:42:p9677581_42] 4;O [peer:42:9677581_42], =0H0 >@30=870F8O [user:2:degunino]
+[ip9677581_42]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1023243
+secret=w5HpKgx3b7
+context=inbound
+call-limit=1
+fromuser=1023243
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:11:p6639975] 4;O [peer:11:6639975], =0H0 >@30=870F8O [user:6:phone_exmast]
+[ip6639975]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1007060
+secret=74956639975
+context=inbound
+call-limit=10
+fromuser=1007060
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:13:p6639982] 4;O [peer:13:6639982], =0H0 >@30=870F8O [user:6:phone_exmast]
+[ip6639982]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1007460
+secret=74956639982
+context=inbound
+call-limit=10
+fromuser=1007460
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:12:p6639958] 4;O [peer:12:6639958], =0H0 >@30=870F8O [user:11:phone_autoterm]
+[ip6639958]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1006520
+secret=74956639958
+context=inbound
+call-limit=10
+fromuser=1006520
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:7:p6639983] 4;O [peer:7:6639983], =0H0 >@30=870F8O [user:9:phone_yan]
+[ip6639983]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1007480
+secret=74956639983
+context=inbound
+call-limit=10
+fromuser=1007480
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:32:test] 4;O [peer:32:test], =0H0 >@30=870F8O [user:1:test]
+[iptest](!)
+t38pt_udptl=yes
+type=friend
+host=
+username=test
+secret=
+context=inbound
+call-limit=10
+fromuser=test
+fromdomain=
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:33:sipnet_calc] 4;O [peer:33:0028513669], =0H0 >@30=870F8O [user:1:test]
+[ip0028513669]
+t38pt_udptl=yes
+type=friend
+host=sipnet.ru
+username=0028513669
+secret=Daq5PuMGAW
+context=inbound
+call-limit=10
+fromuser=0028513669
+fromdomain=sipnet.ru
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:21:p6385396] 4;O [peer:21:6385396], =0H0 >@30=870F8O [user:8:phone_azbuka]
+[ip6385396]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.245
+username=74956385396*1
+secret=lt2yMj5nkqse
+context=inbound
+call-limit=10
+fromuser=74956385396*1
+fromdomain=85.94.32.245
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:22:p6385586] 4;O [peer:22:6385586], =0H0 >@30=870F8O [user:8:phone_azbuka]
+[ip6385586]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.248
+username=74956385586*1
+secret=v9pYXwi8L3N5
+context=inbound
+call-limit=10
+fromuser=74956385586*1
+fromdomain=85.94.32.248
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:15:p6637453] 4;O [peer:15:6637453], =0H0 >@30=870F8O [user:10:phone_atomic]
+[ip6637453]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1012120
+secret=74956637453
+context=inbound
+call-limit=10
+fromuser=1012120
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:27:p6637465] 4;O [peer:27:6637465], =0H0 >@30=870F8O [user:13:phone_diskom]
+[ip6637465]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1005520
+secret=74956637465
+context=inbound
+call-limit=10
+fromuser=1005520
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:26:p6637472] 4;O [peer:26:6637472], =0H0 >@30=870F8O [user:13:phone_diskom]
+[ip6637472]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1005540
+secret=74956637472
+context=inbound
+call-limit=10
+fromuser=1005540
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:53:p6385126_53] 4;O [peer:53:6385126_53], =0H0 >@30=870F8O [user:19:opl_1]
+[ip6385126_53]
+t38pt_udptl=yes,redundancy,maxdatagram=1500
+type=friend
+host=85.94.32.245
+username=74956385126*1
+secret=owCAItKm4ycK
+context=inbound
+call-limit=10
+fromuser=74956385126*1
+fromdomain=85.94.32.245
+canreinvite=no
+insecure=invite
+nat=no
+
+;B>G:0 2E>40 >B A5@25@0 [peer:24:deg_acid] 4;O [peer:24:9677581acid], =0H0 >@30=870F8O [user:21:acid]
+[ip9677581acid](!)
+t38pt_udptl=yes
+type=friend
+host=10.154.28.98
+username=100004
+secret=400001
+context=inbound
+call-limit=10
+fromuser=100004
+fromdomain=10.154.28.98
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:10:p7218798] 4;O [peer:10:7218798], =0H0 >@30=870F8O [user:22:kalugin]
+[ip7218798]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1014421
+secret=51235504
+context=inbound
+call-limit=10
+fromuser=1014421
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:16:p6428607_16] 4;O [peer:16:6428607_16], =0H0 >@30=870F8O [user:23:dmitrovskoe]
+[ip6428607_16]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1014461
+secret=51235504
+context=inbound
+call-limit=10
+fromuser=1014461
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:31:mcn1] 4;O [peer:31:1903_1], =0H0 >@30=870F8O [user:24:AE>4OI0O A2O7L]
+[ip1903_1]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.245
+username=id81421
+secret=uVd9QCE89BqO
+context=inbound
+call-limit=10
+fromuser=id81421
+fromdomain=85.94.32.245
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:28:mcn2] 4;O [peer:28:1903_2], =0H0 >@30=870F8O [user:24:AE>4OI0O A2O7L]
+[ip1903_2]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.245
+username=id81422
+secret=uVd9QCE89BqO
+context=inbound
+call-limit=10
+fromuser=id81422
+fromdomain=85.94.32.245
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:29:mcn3] 4;O [peer:29:1903_3], =0H0 >@30=870F8O [user:24:AE>4OI0O A2O7L]
+[ip1903_3]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.245
+username=id81423
+secret=uVd9QCE89BqO
+context=inbound
+call-limit=10
+fromuser=id81423
+fromdomain=85.94.32.245
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:30:mcn4] 4;O [peer:30:1903_4], =0H0 >@30=870F8O [user:24:AE>4OI0O A2O7L]
+[ip1903_4]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.245
+username=id81424
+secret=uVd9QCE89BqO
+context=inbound
+call-limit=10
+fromuser=id81424
+fromdomain=85.94.32.245
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:17:p9677598_17] 4;O [peer:17:9677598_17], =0H0 >@30=870F8O [user:25:dmitrovskoe2]
+[ip9677598_17]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1014423
+secret=51235504
+context=inbound
+call-limit=10
+fromuser=1014423
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:14:p6639986] 4;O [peer:14:6639986], =0H0 >@30=870F8O [user:26:zebra]
+[ip6639986]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1008640
+secret=74956639986
+context=inbound
+call-limit=10
+fromuser=1008640
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:34:p6467815_34] 4;O [peer:34:6467815_34], =0H0 >@30=870F8O [user:27:comfortauto]
+[ip6467815_34]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1020540
+secret=74956467825
+context=inbound
+call-limit=10
+fromuser=1020540
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:50:p6467815_50] 4;O [peer:50:6467815_50], =0H0 >@30=870F8O [user:27:comfortauto]
+[ip6467815_50]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1024300
+secret=8KMtjAo1of
+context=inbound
+call-limit=1
+fromuser=1024300
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:51:p6467815_51] 4;O [peer:51:6467815_51], =0H0 >@30=870F8O [user:27:comfortauto]
+[ip6467815_51]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1024340
+secret=3RNAoncpMK
+context=inbound
+call-limit=1
+fromuser=1024340
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:35:p6467816_35] 4;O [peer:35:6467816_35], =0H0 >@30=870F8O [user:28:opl_2]
+[ip6467816_35]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1020860
+secret=74956467816
+context=inbound
+call-limit=10
+fromuser=1020860
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:36:deg_nikolos] 4;O [peer:36:9677581nik], =0H0 >@30=870F8O [user:29:nikolos]
+[ip9677581nik](!)
+t38pt_udptl=yes
+type=friend
+host=10.154.28.98
+username=10000411
+secret=10000422
+context=inbound
+call-limit=10
+fromuser=10000411
+fromdomain=10.154.28.98
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:37:p6385097] 4;O [peer:37:6385097], =0H0 >@30=870F8O [user:30:hzkto1]
+[ip6385097]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.248
+username=74956385097*1
+secret=TNnsS7H75AtM
+context=inbound
+call-limit=10
+fromuser=74956385097*1
+fromdomain=85.94.32.248
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:8:p7218720_8] 4;O [peer:8:7218720_8], =0H0 >@30=870F8O [user:31:degunino_fax]
+[ip7218720_8]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1014460
+secret=51235504
+context=inbound
+call-limit=10
+fromuser=1014460
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:38:p6385041_38] 4;O [peer:38:6385041_38], =0H0 >@30=870F8O [user:32:smartbox]
+[ip6385041_38]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.248
+username=74956385041*1
+secret=HdH4j4koeyOc
+context=inbound
+call-limit=10
+fromuser=74956385041*1
+fromdomain=85.94.32.248
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:39:p6385042_39] 4;O [peer:39:6385042_39], =0H0 >@30=870F8O [user:32:smartbox]
+[ip6385042_39]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.248
+username=74956385042*1
+secret=bVgVGwfY6e0K
+context=inbound
+call-limit=10
+fromuser=74956385042*1
+fromdomain=85.94.32.248
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:45:nitro_test] 4;O [peer:45:nitro_test], =0H0 >@30=870F8O [user:34:nitro_test]
+[ipnitro_test]
+t38pt_udptl=yes
+type=friend
+host=
+username=nitro_test
+secret=
+context=inbound
+call-limit=10
+fromuser=nitro_test
+fromdomain=
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:20:p6639985] 4;O [peer:20:6639985], =0H0 >@30=870F8O [user:35:kuznecov]
+[ip6639985]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1007660
+secret=74956639985
+context=inbound
+call-limit=10
+fromuser=1007660
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:46:p6385574_46] 4;O [peer:46:6385574_46], =0H0 >@30=870F8O [user:36:afex]
+[ip6385574_46]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.248
+username=74956385574*1
+secret=uRAWlCtYTbHs
+context=inbound
+call-limit=10
+fromuser=74956385574*1
+fromdomain=85.94.32.248
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:47:p6385453] 4;O [peer:47:6385453], =0H0 >@30=870F8O [user:37:opl_3]
+[ip6385453]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.245
+username=74956385453*1
+secret=sK5UqYL0GZfF
+context=inbound
+call-limit=1
+fromuser=74956385453*1
+fromdomain=85.94.32.245
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:48:p6385259_48] 4;O [peer:48:6385259_48], =0H0 >@30=870F8O [user:38:opl_4]
+[ip6385259_48]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.248
+username=74956385259*1
+secret=OWxXkPcOlNcz
+context=inbound
+call-limit=10
+fromuser=74956385259*1
+fromdomain=85.94.32.248
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;B>G:0 2E>40 >B A5@25@0 [peer:49:p6385627_49] 4;O [peer:49:6385627_49], =0H0 >@30=870F8O [user:39:opl_5]
+[ip6385627_49]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.248
+username=74956385627*1
+secret=mduKo8I2kxHZ
+context=inbound
+call-limit=10
+fromuser=74956385627*1
+fromdomain=85.94.32.248
+canreinvite=yes
+insecure=invite
+nat=yes
+
+
+
+
+;sip-degunino-10020 <-> [context:ip9677581_5]
+[10020]
+t38pt_udptl=Yes
+username=10020
+secret=02001
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581_5
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-degunino-10021 <-> [context:ip9677581_6]
+[10021]
+t38pt_udptl=Yes
+username=10021
+secret=12001
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581_6
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-degunino-10022 <-> [context:ip9677581_40]
+[10022]
+t38pt_udptl=Yes
+username=10022
+secret=0Mk1
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581_40
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-degunino-10023 <-> [context:ip9677581_41]
+[10023]
+t38pt_udptl=Yes
+username=10023
+secret=X757
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581_41
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-degunino-10024 <-> [context:ip9677581_42]
+[10024]
+t38pt_udptl=Yes
+username=10024
+secret=7ECs684
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581_42
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_exmast-10062 <-> [context:ip6639975]
+[10062]
+t38pt_udptl=Yes
+username=10062
+secret=26001
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639975
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_exmast-10064 <-> [context:ip6639982]
+[10064]
+t38pt_udptl=Yes
+username=10064
+secret=46001
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639982
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_autoterm-10065200 <-> [context:ip6639958]
+[10065200]
+t38pt_udptl=Yes
+username=10065200
+secret=74956639958
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c6639958
+call-limit=10
+dtmfmode=inband
+canreinvite=Yes
+
+;sip-phone_exmast-10070600 <-> [context:ip6639975]
+[10070600]
+t38pt_udptl=Yes
+username=10070600
+secret=74956639975
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639975
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_exmast-10074600 <-> [context:ip6639982]
+[10074600]
+t38pt_udptl=Yes
+username=10074600
+secret=74956639982
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639982
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_yan-100748 <-> [context:ip6639983]
+[100748]
+t38pt_udptl=Yes
+username=100748
+secret=74956639983
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639983
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-test-10076 <-> [context:iptest]
+[10076]
+t38pt_udptl=Yes
+username=10076
+secret=67001
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=ctest
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-test-10077 <-> [context:ip0028513669]
+[10077]
+t38pt_udptl=Yes
+username=10077
+secret=77001
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c0028513669
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_azbuka-10080 <-> [context:ip6385396]
+[10080]
+t38pt_udptl=Yes
+username=10080
+secret=08001
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385396
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_azbuka-10085 <-> [context:ip6385586]
+[10085]
+t38pt_udptl=Yes
+username=10085
+secret=58001
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385586
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_atomic-10102 <-> [context:ip6637453]
+[10102]
+t38pt_udptl=Yes
+username=10102
+secret=20101
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6637453
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_atomic-10121200 <-> [context:ip6637453]
+[10121200]
+t38pt_udptl=Yes
+username=10121200
+secret=74956637453
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6637453
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_diskom-10130 <-> [context:ip6637465]
+[10130]
+t38pt_udptl=Yes
+username=10130
+secret=03101
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6637465
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-phone_diskom-10131 <-> [context:ip6637472]
+[10131]
+t38pt_udptl=Yes
+username=10131
+secret=13101
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c6637472
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_1-10190 <-> [context:ip6385126_53]
+[10190]
+t38pt_udptl=Yes
+username=10190
+secret=09101
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385126_53
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_1-10191 <-> [context:ip6385126_53]
+[10191]
+t38pt_udptl=Yes
+username=10191
+secret=19101
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385126_53
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_1-10192 <-> [context:ip6385126_53]
+[10192]
+t38pt_udptl=Yes
+username=10192
+secret=29101
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385126_53
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-acid-10210 <-> [context:ip9677581acid]
+[10210]
+t38pt_udptl=Yes
+username=10210
+secret=01201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581acid
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-kalugin-10220 <-> [context:ip7218798]
+[10220]
+t38pt_udptl=Yes
+username=10220
+secret=02201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c7218798
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-dmitrovskoe-10230 <-> [context:ip6428607_16]
+[10230]
+t38pt_udptl=Yes
+username=10230
+secret=03201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6428607_16
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-AE>4OI0O A2O7L-10241 <-> [context:ip1903_1]
+[10241]
+t38pt_udptl=Yes
+username=10241
+secret=14201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c1903_1
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-AE>4OI0O A2O7L-10242 <-> [context:ip1903_2]
+[10242]
+t38pt_udptl=Yes
+username=10242
+secret=24201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c1903_2
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-AE>4OI0O A2O7L-10243 <-> [context:ip1903_3]
+[10243]
+t38pt_udptl=Yes
+username=10243
+secret=34201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c1903_3
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-AE>4OI0O A2O7L-10244 <-> [context:ip1903_4]
+[10244]
+t38pt_udptl=Yes
+username=10244
+secret=44201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c1903_4
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-dmitrovskoe2-10250 <-> [context:ip9677598_17]
+[10250]
+t38pt_udptl=Yes
+username=10250
+secret=05201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677598_17
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-zebra-10260 <-> [context:ip6639986]
+[10260]
+t38pt_udptl=Yes
+username=10260
+secret=06201
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c6639986
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-comfortauto-10270 <-> [context:ip6467815_34]
+[10270]
+t38pt_udptl=Yes
+username=10270
+secret=07201
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c6467815_34
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-comfortauto-10271 <-> [context:ip6467815_34]
+[10271]
+t38pt_udptl=Yes
+username=10271
+secret=17201
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c6467815_34
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-comfortauto-10272 <-> [context:ip6467815_50]
+[10272]
+t38pt_udptl=Yes
+username=10272
+secret=k61U
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6467815_50
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-comfortauto-10273 <-> [context:ip6467815_51]
+[10273]
+t38pt_udptl=Yes
+username=10273
+secret=CgDHV
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6467815_51
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_2-10280 <-> [context:ip6467816_35]
+[10280]
+t38pt_udptl=Yes
+username=10280
+secret=08201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6467816_35
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_2-10281 <-> [context:ip6467816_35]
+[10281]
+t38pt_udptl=Yes
+username=10281
+secret=18201
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6467816_35
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-nikolos-10290 <-> [context:ip9677581nik]
+[10290]
+t38pt_udptl=Yes
+username=10290
+secret=09201
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c9677581nik
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-hzkto1-10301 <-> [context:ip6385097]
+[10301]
+t38pt_udptl=Yes
+username=10301
+secret=10301
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c6385097
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-hzkto1-10302 <-> [context:ip6385097]
+[10302]
+t38pt_udptl=Yes
+username=10302
+secret=20301
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c6385097
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-degunino_fax-10311 <-> [context:ip7218720_8]
+[10311]
+t38pt_udptl=Yes
+username=10311
+secret=11301
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c7218720_8
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-smartbox-10321 <-> [context:ip6385041_38]
+[10321]
+t38pt_udptl=Yes
+username=10321
+secret=12301
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385041_38
+call-limit=10
+dtmfmode=inband
+canreinvite=Yes
+
+;sip-smartbox-10322 <-> [context:ip6385042_39]
+[10322]
+t38pt_udptl=Yes
+username=10322
+secret=22301
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385042_39
+call-limit=10
+dtmfmode=inband
+canreinvite=Yes
+
+;sip-nitro_test-10341 <-> [context:ipnitro_test]
+[10341]
+username=10341
+secret=11111
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=cnitro_test
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-nitro_test-10342 <-> [context:ipnitro_test]
+[10342]
+t38pt_udptl=Yes
+username=10342
+secret=24301
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=cnitro_test
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-nitro_test-10343 <-> [context:ipnitro_test]
+[10343]
+t38pt_udptl=Yes
+username=10343
+secret=34301
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=cnitro_test
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-kuznecov-10350 <-> [context:ip6639985]
+[10350]
+t38pt_udptl=Yes
+username=10350
+secret=0e7EdA2
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639985
+call-limit=10
+dtmfmode=inband
+canreinvite=Yes
+
+;sip-afex-10360 <-> [context:ip6385574_46]
+[10360]
+t38pt_udptl=Yes
+username=10360
+secret=z93HX
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385574_46
+call-limit=1
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_3-10370 <-> [context:ip6385453]
+[10370]
+t38pt_udptl=Yes
+username=10370
+secret=XO1tA
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385453
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_4-10381 <-> [context:ip6385259_48]
+[10381]
+t38pt_udptl=Yes
+username=10381
+secret=KJ0F
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385259_48
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_4-10382 <-> [context:ip6385259_48]
+[10382]
+t38pt_udptl=Yes
+username=10382
+secret=0ina1
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385259_48
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_5-10391 <-> [context:ip6385627_49]
+[10391]
+t38pt_udptl=Yes
+username=10391
+secret=0P3a38D
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385627_49
+call-limit=10
+dtmfmode=auto
+canreinvite=Yes
+
+;sip-opl_1-11111 <-> [context:ip6385126_53]
+[11111]
+t38pt_udptl=yes,redundancy,maxdatagram=1500
+username=11111
+secret=aaaaa
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385126_53
+call-limit=10
+dtmfmode=rfc2833
+canreinvite=no
+
+
+

@@ -1,0 +1,8 @@
+2013/10/09 15:14:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /var/www/html/ext1/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/ext1/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /var/www/html/ext1/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/ext1/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ext1/index.php?r=gii
+---

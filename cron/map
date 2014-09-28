@@ -1,0 +1,147 @@
+[0;37mName/username              Host            Dyn Nat ACL Port     Status     
+10020/10020                10.112.28.98     D   N      5060     Unmonitored 
+10021/10021                10.112.28.98     D          5060     Unmonitored 
+10022/10022                10.112.28.98     D          5060     Unmonitored 
+10023/10023                10.112.28.98     D   N      5060     Unmonitored 
+10024/10024                10.112.28.98     D          5060     Unmonitored 
+10064/10064                10.112.30.27     D          5061     Unmonitored 
+10065200/10065200          10.112.30.19     D   N      5060     Unmonitored 
+10074600/10074600          10.112.30.27     D          5060     Unmonitored 
+100748/100748              10.112.30.26     D          5060     Unmonitored 
+10076/10076                (Unspecified)    D   N      5060     Unmonitored 
+10077/10077                (Unspecified)    D          5060     Unmonitored 
+10102/10102                10.112.30.36     D          5060     Unmonitored 
+10103/10103                10.112.30.36     D   N      5061     Unmonitored 
+10104/10104                10.112.30.92     D   N      5060     Unmonitored 
+10105/10105                10.112.30.31     D   N      5060     Unmonitored 
+10106/10106                10.112.30.31     D   N      5061     Unmonitored 
+10121200/10121200          (Unspecified)    D          5060     Unmonitored 
+10130/10130                10.112.30.22     D          5060     Unmonitored 
+10131/10131                10.112.30.22     D   N      5061     Unmonitored 
+10161/10161                (Unspecified)    D   N      5060     Unmonitored 
+10190/10190                (Unspecified)    D          5060     Unmonitored 
+10191/10191                (Unspecified)    D          5060     Unmonitored 
+10192/10192                (Unspecified)    D          5060     Unmonitored 
+10210/10210                (Unspecified)    D          5060     Unmonitored 
+10241/10241                (Unspecified)    D          5060     Unmonitored 
+10242/10242                (Unspecified)    D          5060     Unmonitored 
+10243/10243                (Unspecified)    D          5060     Unmonitored 
+10245/10245                (Unspecified)    D          5060     Unmonitored 
+10246/10246                (Unspecified)    D          5060     Unmonitored 
+10247/10247                (Unspecified)    D          5060     Unmonitored 
+10248/10248                (Unspecified)    D          5060     Unmonitored 
+10260/10260                10.151.173.93    D   N      5060     Unmonitored 
+10280/10280                10.0.42.67       D          5060     Unmonitored 
+10281/10281                10.0.42.67       D          5061     Unmonitored 
+10290/10290                (Unspecified)    D   N      5060     Unmonitored 
+10301/10301                10.112.30.58     D   N      5060     Unmonitored 
+10302/10302                10.112.30.58     D   N      5061     Unmonitored 
+10312/10312                (Unspecified)    D          5060     Unmonitored 
+10313/10313                (Unspecified)    D          5060     Unmonitored 
+10314/10314                (Unspecified)    D          5060     Unmonitored 
+10315/10315                (Unspecified)    D          5060     Unmonitored 
+10321/10321                10.112.30.66     D   N      5060     Unmonitored 
+10322/10322                10.112.30.66     D   N      5061     Unmonitored 
+10323/10323                10.112.30.82     D   N      5060     Unmonitored 
+10324/10324                109.252.251.173  D   N      5060     Unmonitored 
+10325/10325                (Unspecified)    D   N      5060     Unmonitored 
+10326/10326                83.69.208.229    D   N      5060     Unmonitored 
+10327/10327                83.69.208.229    D   N      5061     Unmonitored 
+10341/10341                (Unspecified)    D   N      5060     Unmonitored 
+10342/10342                (Unspecified)    D   N      5060     Unmonitored 
+10343/10343                (Unspecified)    D   N      5060     Unmonitored 
+10350/10350                10.112.30.28     D   N      5060     Unmonitored 
+10360/10360                (Unspecified)    D          5060     Unmonitored 
+10370/10370                10.0.42.38       D   N      5060     Unmonitored 
+10381/10381                10.0.42.30       D          5060     Unmonitored 
+10382/10382                10.0.42.30       D          5061     Unmonitored 
+10391/10391                10.0.42.62       D   N      5061     Unmonitored 
+10392/10392                10.0.42.63       D          5060     Unmonitored 
+10393/10393                10.0.42.63       D          5061     Unmonitored 
+10410/10410                10.0.42.71       D          5061     Unmonitored 
+10430/10430                10.113.76.49     D   N      5060     Unmonitored 
+10450/10450                (Unspecified)    D   N      5060     Unmonitored 
+10451/10451                (Unspecified)    D   N      5060     Unmonitored 
+10452/10452                (Unspecified)    D   N      5060     Unmonitored 
+10453/10453                (Unspecified)    D   N      5060     Unmonitored 
+10454/10454                (Unspecified)    D   N      5060     Unmonitored 
+10455/10455                (Unspecified)    D   N      5060     Unmonitored 
+10521/10521                10.112.30.17     D   N      5060     Unmonitored 
+10522/10522                10.112.30.17     D   N      5061     Unmonitored 
+10531/10531                (Unspecified)    D   N      5060     Unmonitored 
+10532/10532                (Unspecified)    D   N      5060     Unmonitored 
+10541/10541                10.112.30.81     D   N      5060     Unmonitored 
+10551/10551                10.112.249.46    D          5060     Unmonitored 
+10552/10552                10.112.249.46    D          5061     Unmonitored 
+10571/10571                10.0.42.161      D          5060     Unmonitored 
+10572/10572                10.0.42.161      D          5061     Unmonitored 
+10581/10581                10.113.57.63     D          5060     Unmonitored 
+10582/10582                (Unspecified)    D          5060     Unmonitored 
+10585/10585                10.113.57.63     D          5061     Unmonitored 
+10586/10586                (Unspecified)    D          5060     Unmonitored 
+10590/10590                10.112.30.18     D   N      5060     Unmonitored 
+10601/10601                10.113.76.100    D   N      5060     Unmonitored 
+10611/10611                10.113.28.28     D   N      5060     Unmonitored 
+10621/10621                10.113.57.68     D   N      5060     Unmonitored 
+10622/10622                10.113.57.68     D   N      5061     Unmonitored 
+11111/11111                (Unspecified)    D          5060     Unmonitored 
+ip0028513669/0028513669    212.53.40.40         N      5060     Unmonitored 
+ip1903_1/id81421           85.94.32.245         N      5060     Unmonitored 
+ip1903_2/id81422           85.94.32.245         N      5060     Unmonitored 
+ip1903_3/id81423           85.94.32.245         N      5060     Unmonitored 
+ip1903_4/id81424           85.94.32.245         N      5060     Unmonitored 
+ip1956_1/id81425           85.94.32.245         N      5060     Unmonitored 
+ip1956_2/id81426           85.94.32.245         N      5060     Unmonitored 
+ip1956_3/id81427           85.94.32.245         N      5060     Unmonitored 
+ip1956_4/id81428           85.94.32.245         N      5060     Unmonitored 
+ip499213-0306_82/74992130  85.94.32.244         N      5060     Unmonitored 
+ip6385041_38/74956385041*  85.94.32.248         N      5060     Unmonitored 
+ip6385042_39/74956385042*  85.94.32.248         N      5060     Unmonitored 
+ip6385043_67/74956385043*  85.94.32.248         N      5060     Unmonitored 
+ip6385097_37/74956385097*  85.94.32.248         N      5060     Unmonitored 
+ip6385126_53/74956385126*  85.94.32.245         N      5060     Unmonitored 
+ip6385256_58/74956385256*  85.94.32.248         N      5060     Unmonitored 
+ip6385259_48/74956385259*  85.94.32.248         N      5060     Unmonitored 
+ip6385448_78/74956385448*  85.94.32.248         N      5060     Unmonitored 
+ip6385453_47/74956385453*  85.94.32.245         N      5060     Unmonitored 
+ip6385574_46/74956385574*  85.94.32.248         N      5060     Unmonitored 
+ip6385586_22/74956385586*  85.94.32.248         N      5060     Unmonitored 
+ip6385589_69/74956385589*  85.94.32.244         N      5060     Unmonitored 
+ip6385627_49/74956385627*  85.94.32.248         N      5060     Unmonitored 
+ip6385627_61/74956385627*  85.94.32.248         N      5060     Unmonitored 
+ip6385627_62/74956385627*  85.94.32.248         N      5060     Unmonitored 
+ip6385672_79/74956385672*  85.94.32.244         N      5060     Unmonitored 
+ip6385682_80/74956385682*  85.94.32.245         N      5060     Unmonitored 
+ip6467815_34/1020540       89.208.190.2         N      5060     Unmonitored 
+ip6467816_35/1020860       89.208.190.2         N      5060     Unmonitored 
+ip6637453_15/1012120       89.208.190.2         N      5060     Unmonitored 
+ip6637453_64/1012121       89.208.190.2         N      5060     Unmonitored 
+ip6637453_65/1033100       89.208.190.2         N      5060     Unmonitored 
+ip6637453_77/1102964       89.208.190.2         N      5060     Unmonitored 
+ip6637465_27/1005520       89.208.190.2         N      5060     Unmonitored 
+ip6637472_26/1005540       89.208.190.2         N      5060     Unmonitored 
+ip6639958_12/1006520       89.208.190.2         N      5060     Unmonitored 
+ip6639975_11/1007060       89.208.190.2         N      5060     Unmonitored 
+ip6639982_13/1007460       89.208.190.2         N      5060     Unmonitored 
+ip6639983_7/1007480        89.208.190.2         N      5060     Unmonitored 
+ip6639985_20/1007660       89.208.190.2         N      5060     Unmonitored 
+ip6639986_14/1008640       89.208.190.2         N      5060     Unmonitored 
+ip6642945_66/1011320       89.208.190.2         N      5060     Unmonitored 
+ip7218720_8/1014460        89.208.190.2         N      5060     Unmonitored 
+ip7218741_60/1006100       89.208.190.2         N      5060     Unmonitored 
+ip7218798_10/1014421       89.208.190.2         N      5060     Unmonitored 
+ip7499213-04-34_71/749921  85.94.32.244         N      5060     Unmonitored 
+ip7499213-04-34_72/749921  85.94.32.244         N      5060     Unmonitored 
+ip74992130301_73/74992130  85.94.32.244         N      5060     Unmonitored 
+ip74992130301_74/74992130  85.94.32.244         N      5060     Unmonitored 
+ip74992130302_75/74992130  85.94.32.244         N      5060     Unmonitored 
+ip74992130302_76/74992130  85.94.32.244         N      5060     Unmonitored 
+ip9677581_40/1023241       89.208.190.2         N      5060     Unmonitored 
+ip9677581_41/1023242       89.208.190.2         N      5060     Unmonitored 
+ip9677581_42/1023243       89.208.190.2         N      5060     Unmonitored 
+ip9677581_5/1001400        89.208.190.2         N      5060     Unmonitored 
+ip9677581_6/1001401        89.208.190.2         N      5060     Unmonitored 
+ip9677595_43/1045142       89.208.190.2         N      5060     Unmonitored 
+ip9677595_44/1014441       89.208.190.2         N      5060     Unmonitored 
+144 sip peers [Monitored: 0 online, 0 offline Unmonitored: 144 online, 0 offline]
+[0m

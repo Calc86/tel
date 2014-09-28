@@ -1,0 +1,810 @@
+
+
+<------------>
+[Sep 30 16:43:15] VERBOSE[9813] logger.c:     -- Executing [1014441@inbound:1] NoOp("SIP/1014441-b761e090", "fax_test-p9677595") in new stack
+[Sep 30 16:43:15] VERBOSE[9813] logger.c:     -- Executing [1014441@inbound:2] Macro("SIP/1014441-b761e090", "dialip9677595,SIP/210") in new stack
+[Sep 30 16:43:15] VERBOSE[9813] logger.c:     -- Executing [s@macro-dialip9677595:1] Goto("SIP/1014441-b761e090", "startdial") in new stack
+[Sep 30 16:43:15] VERBOSE[9813] logger.c:     -- Goto (macro-dialip9677595,s,2)
+[Sep 30 16:43:15] VERBOSE[9813] logger.c:     -- Executing [s@macro-dialip9677595:2] Dial("SIP/1014441-b761e090", "SIP/210,100,t") in new stack
+[Sep 30 16:43:15] VERBOSE[9813] logger.c:   == Using SIP RTP CoS mark 5
+[Sep 30 16:43:15] VERBOSE[9813] logger.c:   == Using UDPTL CoS mark 5
+[Sep 30 16:43:15] VERBOSE[9813] logger.c:     -- Called 210
+[Sep 30 16:43:15] VERBOSE[9813] logger.c:     -- SIP/210-b762f680 is ringing
+[Sep 30 16:43:15] VERBOSE[9813] logger.c: 
+<--- Transmitting (NAT) to 89.208.190.2:5060 --->
+SIP/2.0 180 Ringing
+Via: SIP/2.0/UDP 89.208.190.2;branch=z9hG4bK2b1c.3e2b2972.0;received=89.208.190.2
+Via: SIP/2.0/UDP 89.208.190.8:5060;branch=z9hG4bK44f183f1f431f99936d22488fd05f557;rport=5060
+Record-Route: <sip:89.208.190.2;lr=on;ftag=829d3099e992ab945c60434ff1ef98bf;did=b43.bd0797f5>
+From: anonymous <sip:*1014420@89.208.190.8>;tag=829d3099e992ab945c60434ff1ef98bf
+To: <sip:*1014441@89.208.190.2>;tag=as074b1151
+Call-ID: 156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2
+CSeq: 200 INVITE
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Contact: <sip:1014441@10.112.30.70>	//сюда нужно на наш транк поставить from domian и проверить, что он вкорячит :)
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:43:16] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1014441@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=b7521da2
+To: sip:1014441@89.208.117.26:5060
+Call-ID: 00955266-378b4203-e47ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:43:16] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:43:16] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=b7521da2
+To: sip:1014441@89.208.117.26:5060;tag=as140edca2
+Call-ID: 00955266-378b4203-e47ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:43:16] VERBOSE[9813] logger.c:     -- SIP/210-b762f680 answered SIP/1014441-b761e090
+[Sep 30 16:43:16] VERBOSE[9813] logger.c: Audio is at 10.112.30.70 port 15294
+[Sep 30 16:43:16] VERBOSE[9813] logger.c: Adding codec 0x8 (alaw) to SDP
+[Sep 30 16:43:16] VERBOSE[9813] logger.c: Adding codec 0x100 (g729) to SDP
+[Sep 30 16:43:16] VERBOSE[9813] logger.c: Adding codec 0x4 (ulaw) to SDP
+[Sep 30 16:43:16] VERBOSE[9813] logger.c: Adding non-codec 0x1 (telephone-event) to SDP
+[Sep 30 16:43:16] VERBOSE[9813] logger.c: 
+<--- Reliably Transmitting (NAT) to 89.208.190.2:5060 --->
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 89.208.190.2;branch=z9hG4bK2b1c.3e2b2972.0;received=89.208.190.2
+Via: SIP/2.0/UDP 89.208.190.8:5060;branch=z9hG4bK44f183f1f431f99936d22488fd05f557;rport=5060
+Record-Route: <sip:89.208.190.2;lr=on;ftag=829d3099e992ab945c60434ff1ef98bf;did=b43.bd0797f5>
+From: anonymous <sip:*1014420@89.208.190.8>;tag=829d3099e992ab945c60434ff1ef98bf
+To: <sip:*1014441@89.208.190.2>;tag=as074b1151
+Call-ID: 156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2
+CSeq: 200 INVITE
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Contact: <sip:1014441@10.112.30.70>
+Content-Type: application/sdp
+Content-Length: 334
+
+v=0
+o=root 1796503970 1796503970 IN IP4 10.112.30.70
+s=Asterisk PBX 1.6.0.3
+c=IN IP4 10.112.30.70
+t=0 0
+m=audio 15294 RTP/AVP 8 18 0 101
+a=rtpmap:8 PCMA/8000
+a=rtpmap:18 G729/8000
+a=fmtp:18 annexb=no
+a=rtpmap:0 PCMU/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-16
+a=silenceSupp:off - - - -
+a=ptime:20
+a=sendrecv
+
+<------------>
+[Sep 30 16:43:17] VERBOSE[11971] logger.c: Retransmitting #1 (NAT) to 89.208.190.2:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 89.208.190.2;branch=z9hG4bK2b1c.3e2b2972.0;received=89.208.190.2
+Via: SIP/2.0/UDP 89.208.190.8:5060;branch=z9hG4bK44f183f1f431f99936d22488fd05f557;rport=5060
+Record-Route: <sip:89.208.190.2;lr=on;ftag=829d3099e992ab945c60434ff1ef98bf;did=b43.bd0797f5>
+From: anonymous <sip:*1014420@89.208.190.8>;tag=829d3099e992ab945c60434ff1ef98bf
+To: <sip:*1014441@89.208.190.2>;tag=as074b1151
+Call-ID: 156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2
+CSeq: 200 INVITE
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Contact: <sip:1014441@10.112.30.70>
+Content-Type: application/sdp
+Content-Length: 334
+
+v=0
+o=root 1796503970 1796503970 IN IP4 10.112.30.70
+s=Asterisk PBX 1.6.0.3
+c=IN IP4 10.112.30.70
+t=0 0
+m=audio 15294 RTP/AVP 8 18 0 101
+a=rtpmap:8 PCMA/8000
+a=rtpmap:18 G729/8000
+a=fmtp:18 annexb=no
+a=rtpmap:0 PCMU/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-16
+a=silenceSupp:off - - - -
+a=ptime:20
+a=sendrecv
+
+---
+[Sep 30 16:43:18] VERBOSE[11971] logger.c: Retransmitting #2 (NAT) to 89.208.190.2:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 89.208.190.2;branch=z9hG4bK2b1c.3e2b2972.0;received=89.208.190.2
+Via: SIP/2.0/UDP 89.208.190.8:5060;branch=z9hG4bK44f183f1f431f99936d22488fd05f557;rport=5060
+Record-Route: <sip:89.208.190.2;lr=on;ftag=829d3099e992ab945c60434ff1ef98bf;did=b43.bd0797f5>
+From: anonymous <sip:*1014420@89.208.190.8>;tag=829d3099e992ab945c60434ff1ef98bf
+To: <sip:*1014441@89.208.190.2>;tag=as074b1151
+Call-ID: 156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2
+CSeq: 200 INVITE
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Contact: <sip:1014441@10.112.30.70>
+Content-Type: application/sdp
+Content-Length: 334
+
+v=0
+o=root 1796503970 1796503970 IN IP4 10.112.30.70
+s=Asterisk PBX 1.6.0.3
+c=IN IP4 10.112.30.70
+t=0 0
+m=audio 15294 RTP/AVP 8 18 0 101
+a=rtpmap:8 PCMA/8000
+a=rtpmap:18 G729/8000
+a=fmtp:18 annexb=no
+a=rtpmap:0 PCMU/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-16
+a=silenceSupp:off - - - -
+a=ptime:20
+a=sendrecv
+
+---
+[Sep 30 16:43:20] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+ACK sip:1014441@89.208.117.26:5060 SIP/2.0
+Record-Route: <sip:89.208.190.2;lr=on;ftag=829d3099e992ab945c60434ff1ef98bf>
+Via: SIP/2.0/UDP 89.208.190.2;branch=z9hG4bK2b1c.3e2b2972.2
+Via: SIP/2.0/UDP 89.208.190.8:5060;rport=5060;branch=z9hG4bK28245fc06f157917b8931d5e7efe9173
+Max-Forwards: 69
+From: anonymous <sip:*1014420@89.208.190.8>;tag=829d3099e992ab945c60434ff1ef98bf
+To: <sip:*1014441@89.208.190.2>;tag=as074b1151
+Call-ID: 156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2
+CSeq: 200 ACK
+User-Agent: Sippy B2BUA (ipPort)
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:43:20] VERBOSE[11971] logger.c: --- (11 headers 0 lines) ---
+[Sep 30 16:43:20] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+ACK sip:1014441@89.208.117.26:5060 SIP/2.0
+Record-Route: <sip:89.208.190.2;lr=on;ftag=829d3099e992ab945c60434ff1ef98bf>
+Via: SIP/2.0/UDP 89.208.190.2;branch=z9hG4bK2b1c.3e2b2972.2
+Via: SIP/2.0/UDP 89.208.190.8:5060;rport=5060;branch=z9hG4bK28245fc06f157917b8931d5e7efe9173
+Max-Forwards: 69
+From: anonymous <sip:*1014420@89.208.190.8>;tag=829d3099e992ab945c60434ff1ef98bf
+To: <sip:*1014441@89.208.190.2>;tag=as074b1151
+Call-ID: 156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2
+CSeq: 200 ACK
+User-Agent: Sippy B2BUA (ipPort)
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:43:20] VERBOSE[11971] logger.c: --- (11 headers 0 lines) ---
+[Sep 30 16:43:20] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+ACK sip:1014441@89.208.117.26:5060 SIP/2.0
+Record-Route: <sip:89.208.190.2;lr=on;ftag=829d3099e992ab945c60434ff1ef98bf>
+Via: SIP/2.0/UDP 89.208.190.2;branch=z9hG4bK2b1c.3e2b2972.2
+Via: SIP/2.0/UDP 89.208.190.8:5060;rport=5060;branch=z9hG4bK28245fc06f157917b8931d5e7efe9173
+Max-Forwards: 69
+From: anonymous <sip:*1014420@89.208.190.8>;tag=829d3099e992ab945c60434ff1ef98bf
+To: <sip:*1014441@89.208.190.2>;tag=as074b1151
+Call-ID: 156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2
+CSeq: 200 ACK
+User-Agent: Sippy B2BUA (ipPort)
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:43:20] VERBOSE[11971] logger.c: --- (11 headers 0 lines) ---
+[Sep 30 16:43:39] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1007480@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=e2621da2
+To: sip:1007480@89.208.117.26:5060
+Call-ID: 00955266-629b4203-567ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:43:39] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:43:39] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=e2621da2
+To: sip:1007480@89.208.117.26:5060;tag=as4e6a6449
+Call-ID: 00955266-629b4203-567ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:43:42] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1014421@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=54621da2
+To: sip:1014421@89.208.117.26:5060
+Call-ID: 00955266-d39b4203-867ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:43:42] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:43:42] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=54621da2
+To: sip:1014421@89.208.117.26:5060;tag=as782d7259
+Call-ID: 00955266-d39b4203-867ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:43:46] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1014441@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=b6621da2
+To: sip:1014441@89.208.117.26:5060
+Call-ID: 00955266-369b4203-c67ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:43:46] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:43:46] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=b6621da2
+To: sip:1014441@89.208.117.26:5060;tag=as50ddaa46
+Call-ID: 00955266-369b4203-c67ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:44:05] NOTICE[11971] chan_sip.c:    -- Re-registration for  100002@10.154.28.98
+[Sep 30 16:44:05] NOTICE[11971] chan_sip.c:    -- Re-registration for  100001@10.154.28.98
+[Sep 30 16:44:05] NOTICE[11971] chan_sip.c: Outbound Registration: Expiry for 10.154.28.98 is 120 sec (Scheduling reregistration in 105 s)
+[Sep 30 16:44:05] NOTICE[11971] chan_sip.c: Outbound Registration: Expiry for 10.154.28.98 is 120 sec (Scheduling reregistration in 105 s)
+[Sep 30 16:44:07] NOTICE[11971] chan_sip.c:    -- Re-registration for  1014441@sip.n1.ipport.net
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: REGISTER 13 headers, 0 lines
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: Reliably Transmitting (no NAT) to 89.208.190.2:5060:
+REGISTER sip:sip.n1.ipport.net SIP/2.0
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK3f7469c3;rport
+Max-Forwards: 70
+From: <sip:1014441@sip.n1.ipport.net>;tag=as629a6a20
+To: <sip:1014441@sip.n1.ipport.net>
+Call-ID: 3184685f26041638174bd80371ca9ee8@127.0.0.1
+CSeq: 151 REGISTER
+User-Agent: Asterisk PBX 1.6.0.3
+Authorization: Digest username="1014441", realm="n1", algorithm=MD5, uri="sip:sip.n1.ipport.net", nonce="4ac347819798d313e55c67d41f56ce9e124036c6", response="280be3795455069a220946923c3daa9f", qop=auth, cnonce="7f71786c", nc=00000004
+Expires: 120
+Contact: <sip:1014441@10.112.30.70>
+Event: registration
+Content-Length: 0
+
+
+---
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 100 Registering...
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK3f7469c3;rport=5060;received=89.208.117.26
+From: <sip:1014441@sip.n1.ipport.net>;tag=as629a6a20
+To: <sip:1014441@sip.n1.ipport.net>
+Call-ID: 3184685f26041638174bd80371ca9ee8@127.0.0.1
+CSeq: 151 REGISTER
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: --- (8 headers 0 lines) ---
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK3f7469c3;rport=5060;received=89.208.117.26
+From: <sip:1014441@sip.n1.ipport.net>;tag=as629a6a20
+To: <sip:1014441@sip.n1.ipport.net>;tag=e4a51bc933ce2bc593953e100a732e8b.1974
+Call-ID: 3184685f26041638174bd80371ca9ee8@127.0.0.1
+CSeq: 151 REGISTER
+WWW-Authenticate: Digest realm="n1", nonce="4ac348bcaee4e766fa45b81da203a3983eb32058", qop="auth", stale=true
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: --- (9 headers 0 lines) ---
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: Responding to challenge, registration to domain/host name sip.n1.ipport.net
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: REGISTER 13 headers, 0 lines
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: Reliably Transmitting (no NAT) to 89.208.190.2:5060:
+REGISTER sip:sip.n1.ipport.net SIP/2.0
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK4996d2dc;rport
+Max-Forwards: 70
+From: <sip:1014441@sip.n1.ipport.net>;tag=as0bb6d7c0
+To: <sip:1014441@sip.n1.ipport.net>
+Call-ID: 3184685f26041638174bd80371ca9ee8@127.0.0.1
+CSeq: 152 REGISTER
+User-Agent: Asterisk PBX 1.6.0.3
+Authorization: Digest username="1014441", realm="n1", algorithm=MD5, uri="sip:sip.n1.ipport.net", nonce="4ac348bcaee4e766fa45b81da203a3983eb32058", response="1fa74e1e4b6124470d76cc7e1fd438f8", qop=auth, cnonce="71249136", nc=00000001
+Expires: 120
+Contact: <sip:1014441@10.112.30.70>
+Event: registration
+Content-Length: 0
+
+
+---
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 100 Registering...
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK4996d2dc;rport=5060;received=89.208.117.26
+From: <sip:1014441@sip.n1.ipport.net>;tag=as0bb6d7c0
+To: <sip:1014441@sip.n1.ipport.net>
+Call-ID: 3184685f26041638174bd80371ca9ee8@127.0.0.1
+CSeq: 152 REGISTER
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: --- (8 headers 0 lines) ---
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK4996d2dc;rport=5060;received=89.208.117.26
+From: <sip:1014441@sip.n1.ipport.net>;tag=as0bb6d7c0
+To: <sip:1014441@sip.n1.ipport.net>;tag=e4a51bc933ce2bc593953e100a732e8b.5c54
+Call-ID: 3184685f26041638174bd80371ca9ee8@127.0.0.1
+CSeq: 152 REGISTER
+Contact: <sip:1014441@89.208.117.26:5060>;expires=120
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: --- (9 headers 0 lines) ---
+[Sep 30 16:44:07] VERBOSE[11971] logger.c: Scheduling destruction of SIP dialog '3184685f26041638174bd80371ca9ee8@127.0.0.1' in 32000 ms (Method: REGISTER)
+[Sep 30 16:44:07] NOTICE[11971] chan_sip.c: Outbound Registration: Expiry for sip.n1.ipport.net is 120 sec (Scheduling reregistration in 105 s)
+[Sep 30 16:44:08] NOTICE[11971] chan_sip.c:    -- Re-registration for  1014421@sip.n1.ipport.net
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: REGISTER 13 headers, 0 lines
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: Reliably Transmitting (no NAT) to 89.208.190.2:5060:
+REGISTER sip:sip.n1.ipport.net SIP/2.0
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK242f4ddf;rport
+Max-Forwards: 70
+From: <sip:1014421@sip.n1.ipport.net>;tag=as7938b1ac
+To: <sip:1014421@sip.n1.ipport.net>
+Call-ID: 16668d6d1c44392e5c1a896e531bfbf7@127.0.0.1
+CSeq: 151 REGISTER
+User-Agent: Asterisk PBX 1.6.0.3
+Authorization: Digest username="1014421", realm="n1", algorithm=MD5, uri="sip:sip.n1.ipport.net", nonce="4ac34782226aa5ffc7e3d550e1b497f72f4ce3af", response="f619b0b5d92b5e09dd861a5ed185c7ee", qop=auth, cnonce="511d2456", nc=00000004
+Expires: 120
+Contact: <sip:1014421@10.112.30.70>
+Event: registration
+Content-Length: 0
+
+
+---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 100 Registering...
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK242f4ddf;rport=5060;received=89.208.117.26
+From: <sip:1014421@sip.n1.ipport.net>;tag=as7938b1ac
+To: <sip:1014421@sip.n1.ipport.net>
+Call-ID: 16668d6d1c44392e5c1a896e531bfbf7@127.0.0.1
+CSeq: 151 REGISTER
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: --- (8 headers 0 lines) ---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK242f4ddf;rport=5060;received=89.208.117.26
+From: <sip:1014421@sip.n1.ipport.net>;tag=as7938b1ac
+To: <sip:1014421@sip.n1.ipport.net>;tag=e4a51bc933ce2bc593953e100a732e8b.df9f
+Call-ID: 16668d6d1c44392e5c1a896e531bfbf7@127.0.0.1
+CSeq: 151 REGISTER
+WWW-Authenticate: Digest realm="n1", nonce="4ac348bdf2c04de916a00cfeb71b66594370f365", qop="auth", stale=true
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: --- (9 headers 0 lines) ---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: Responding to challenge, registration to domain/host name sip.n1.ipport.net
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: REGISTER 13 headers, 0 lines
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: Reliably Transmitting (no NAT) to 89.208.190.2:5060:
+REGISTER sip:sip.n1.ipport.net SIP/2.0
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK2ab52c00;rport
+Max-Forwards: 70
+From: <sip:1014421@sip.n1.ipport.net>;tag=as547d376a
+To: <sip:1014421@sip.n1.ipport.net>
+Call-ID: 16668d6d1c44392e5c1a896e531bfbf7@127.0.0.1
+CSeq: 152 REGISTER
+User-Agent: Asterisk PBX 1.6.0.3
+Authorization: Digest username="1014421", realm="n1", algorithm=MD5, uri="sip:sip.n1.ipport.net", nonce="4ac348bdf2c04de916a00cfeb71b66594370f365", response="4c6c7fa0a4709953dd2b148a2ff9036e", qop=auth, cnonce="3e6cd094", nc=00000001
+Expires: 120
+Contact: <sip:1014421@10.112.30.70>
+Event: registration
+Content-Length: 0
+
+
+---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 100 Registering...
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK2ab52c00;rport=5060;received=89.208.117.26
+From: <sip:1014421@sip.n1.ipport.net>;tag=as547d376a
+To: <sip:1014421@sip.n1.ipport.net>
+Call-ID: 16668d6d1c44392e5c1a896e531bfbf7@127.0.0.1
+CSeq: 152 REGISTER
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: --- (8 headers 0 lines) ---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK2ab52c00;rport=5060;received=89.208.117.26
+From: <sip:1014421@sip.n1.ipport.net>;tag=as547d376a
+To: <sip:1014421@sip.n1.ipport.net>;tag=e4a51bc933ce2bc593953e100a732e8b.5e71
+Call-ID: 16668d6d1c44392e5c1a896e531bfbf7@127.0.0.1
+CSeq: 152 REGISTER
+Contact: <sip:1014421@89.208.117.26:5060>;expires=120
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: --- (9 headers 0 lines) ---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: Scheduling destruction of SIP dialog '16668d6d1c44392e5c1a896e531bfbf7@127.0.0.1' in 32000 ms (Method: REGISTER)
+[Sep 30 16:44:08] NOTICE[11971] chan_sip.c: Outbound Registration: Expiry for sip.n1.ipport.net is 120 sec (Scheduling reregistration in 105 s)
+[Sep 30 16:44:08] NOTICE[11971] chan_sip.c:    -- Re-registration for  1007480@sip.n1.ipport.net
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: REGISTER 13 headers, 0 lines
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: Reliably Transmitting (no NAT) to 89.208.190.2:5060:
+REGISTER sip:sip.n1.ipport.net SIP/2.0
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK28919d65;rport
+Max-Forwards: 70
+From: <sip:1007480@sip.n1.ipport.net>;tag=as21309daa
+To: <sip:1007480@sip.n1.ipport.net>
+Call-ID: 3883db9b672c444126c607361f9c75f5@127.0.0.1
+CSeq: 151 REGISTER
+User-Agent: Asterisk PBX 1.6.0.3
+Authorization: Digest username="1007480", realm="n1", algorithm=MD5, uri="sip:sip.n1.ipport.net", nonce="4ac347831e70f3ba52c7e90498b6cdb658d1ba9a", response="75c0c2cff69a5fcf2341bb1f68753161", qop=auth, cnonce="6deb67ee", nc=00000004
+Expires: 120
+Contact: <sip:1007480@10.112.30.70>
+Event: registration
+Content-Length: 0
+
+
+---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 100 Registering...
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK28919d65;rport=5060;received=89.208.117.26
+From: <sip:1007480@sip.n1.ipport.net>;tag=as21309daa
+To: <sip:1007480@sip.n1.ipport.net>
+Call-ID: 3883db9b672c444126c607361f9c75f5@127.0.0.1
+CSeq: 151 REGISTER
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: --- (8 headers 0 lines) ---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK28919d65;rport=5060;received=89.208.117.26
+From: <sip:1007480@sip.n1.ipport.net>;tag=as21309daa
+To: <sip:1007480@sip.n1.ipport.net>;tag=e4a51bc933ce2bc593953e100a732e8b.a2b2
+Call-ID: 3883db9b672c444126c607361f9c75f5@127.0.0.1
+CSeq: 151 REGISTER
+WWW-Authenticate: Digest realm="n1", nonce="4ac348be3f067c68d57f880c8ada799ab55f78da", qop="auth", stale=true
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: --- (9 headers 0 lines) ---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: Responding to challenge, registration to domain/host name sip.n1.ipport.net
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: REGISTER 13 headers, 0 lines
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: Reliably Transmitting (no NAT) to 89.208.190.2:5060:
+REGISTER sip:sip.n1.ipport.net SIP/2.0
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK0dcd356a;rport
+Max-Forwards: 70
+From: <sip:1007480@sip.n1.ipport.net>;tag=as1af3df72
+To: <sip:1007480@sip.n1.ipport.net>
+Call-ID: 3883db9b672c444126c607361f9c75f5@127.0.0.1
+CSeq: 152 REGISTER
+User-Agent: Asterisk PBX 1.6.0.3
+Authorization: Digest username="1007480", realm="n1", algorithm=MD5, uri="sip:sip.n1.ipport.net", nonce="4ac348be3f067c68d57f880c8ada799ab55f78da", response="b6638ddcccafb6310249473815a1b630", qop=auth, cnonce="0205c352", nc=00000001
+Expires: 120
+Contact: <sip:1007480@10.112.30.70>
+Event: registration
+Content-Length: 0
+
+
+---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 100 Registering...
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK0dcd356a;rport=5060;received=89.208.117.26
+From: <sip:1007480@sip.n1.ipport.net>;tag=as1af3df72
+To: <sip:1007480@sip.n1.ipport.net>
+Call-ID: 3883db9b672c444126c607361f9c75f5@127.0.0.1
+CSeq: 152 REGISTER
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: --- (8 headers 0 lines) ---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.112.30.70:5060;branch=z9hG4bK0dcd356a;rport=5060;received=89.208.117.26
+From: <sip:1007480@sip.n1.ipport.net>;tag=as1af3df72
+To: <sip:1007480@sip.n1.ipport.net>;tag=e4a51bc933ce2bc593953e100a732e8b.978c
+Call-ID: 3883db9b672c444126c607361f9c75f5@127.0.0.1
+CSeq: 152 REGISTER
+Contact: <sip:1007480@89.208.117.26:5060>;expires=120
+Server: OpenSER (1.3.4-tls (x86_64/linux))
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: --- (9 headers 0 lines) ---
+[Sep 30 16:44:08] VERBOSE[11971] logger.c: Scheduling destruction of SIP dialog '3883db9b672c444126c607361f9c75f5@127.0.0.1' in 32000 ms (Method: REGISTER)
+[Sep 30 16:44:08] NOTICE[11971] chan_sip.c: Outbound Registration: Expiry for sip.n1.ipport.net is 120 sec (Scheduling reregistration in 105 s)
+[Sep 30 16:44:09] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1007480@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=e1721da2
+To: sip:1007480@89.208.117.26:5060
+Call-ID: 00955266-61ab4203-387ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:09] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:44:09] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=e1721da2
+To: sip:1007480@89.208.117.26:5060;tag=as38377c77
+Call-ID: 00955266-61ab4203-387ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:44:12] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1014421@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=53721da2
+To: sip:1014421@89.208.117.26:5060
+Call-ID: 00955266-d2ab4203-687ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:12] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:44:12] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=53721da2
+To: sip:1014421@89.208.117.26:5060;tag=as7adaaa48
+Call-ID: 00955266-d2ab4203-687ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:44:16] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1014441@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=b5721da2
+To: sip:1014441@89.208.117.26:5060
+Call-ID: 00955266-35ab4203-a87ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:16] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:44:16] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=b5721da2
+To: sip:1014441@89.208.117.26:5060;tag=as7a8bc616
+Call-ID: 00955266-35ab4203-a87ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:44:39] VERBOSE[11971] logger.c: Really destroying SIP dialog '3184685f26041638174bd80371ca9ee8@127.0.0.1' Method: REGISTER
+[Sep 30 16:44:39] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1007480@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=e0821da2
+To: sip:1007480@89.208.117.26:5060
+Call-ID: 00955266-60bb4203-1a7ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:39] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:44:39] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=e0821da2
+To: sip:1007480@89.208.117.26:5060;tag=as2a5d5d1e
+Call-ID: 00955266-60bb4203-1a7ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:44:40] VERBOSE[11971] logger.c: Really destroying SIP dialog '16668d6d1c44392e5c1a896e531bfbf7@127.0.0.1' Method: REGISTER
+[Sep 30 16:44:40] VERBOSE[11971] logger.c: Really destroying SIP dialog '3883db9b672c444126c607361f9c75f5@127.0.0.1' Method: REGISTER
+[Sep 30 16:44:42] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1014421@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=52821da2
+To: sip:1014421@89.208.117.26:5060
+Call-ID: 00955266-d1bb4203-4a7ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:42] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:44:42] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=52821da2
+To: sip:1014421@89.208.117.26:5060;tag=as467c05a0
+Call-ID: 00955266-d1bb4203-4a7ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:44:46] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+INFO sip:1014441@89.208.117.26:5060 SIP/2.0
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0
+From: sip:pinger@sip.n1.ipport.net;tag=b4821da2
+To: sip:1014441@89.208.117.26:5060
+Call-ID: 00955266-34bb4203-8a7ec1@89.208.190.2
+CSeq: 1 INFO
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:46] VERBOSE[11971] logger.c: --- (7 headers 0 lines) ---
+[Sep 30 16:44:46] VERBOSE[11971] logger.c: 
+<--- Transmitting (no NAT) to 89.208.190.2:5060 --->
+SIP/2.0 481 Call leg/transaction does not exist
+Via: SIP/2.0/UDP 89.208.190.2:5060;branch=0;received=89.208.190.2
+From: sip:pinger@sip.n1.ipport.net;tag=b4821da2
+To: sip:1014441@89.208.117.26:5060;tag=as6e718802
+Call-ID: 00955266-34bb4203-8a7ec1@89.208.190.2
+CSeq: 1 INFO
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:44:56] VERBOSE[11971] logger.c: 
+<--- SIP read from UDP://89.208.190.2:5060 --->
+BYE sip:1014441@89.208.117.26:5060 SIP/2.0
+Record-Route: <sip:89.208.190.2;lr=on;ftag=829d3099e992ab945c60434ff1ef98bf>
+Via: SIP/2.0/UDP 89.208.190.2;branch=z9hG4bK3b1c.2454de23.0
+Via: SIP/2.0/UDP 89.208.190.8:5060;branch=z9hG4bK696df228d159960509b25633eadfdb44;rport=5060
+Max-Forwards: 69
+From: anonymous <sip:*1014420@89.208.190.8>;tag=829d3099e992ab945c60434ff1ef98bf
+To: <sip:*1014441@89.208.190.2>;tag=as074b1151
+Call-ID: 156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2
+CSeq: 201 BYE
+Contact: Anonymous <sip:*1014420@89.208.190.8:5060>
+User-Agent: Sippy B2BUA (ipPort)
+cisco-GUID: 358488396-2901348830-2598363793-3617810479
+h323-conf-id: 358488396-2901348830-2598363793-3617810479
+Content-Length: 0
+
+
+<------------->
+[Sep 30 16:44:56] VERBOSE[11971] logger.c: --- (14 headers 0 lines) ---
+[Sep 30 16:44:56] VERBOSE[11971] logger.c: Sending to 89.208.190.2 : 5060 (NAT)
+[Sep 30 16:44:56] VERBOSE[11971] logger.c: 
+<--- Transmitting (NAT) to 89.208.190.2:5060 --->
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 89.208.190.2;branch=z9hG4bK3b1c.2454de23.0;received=89.208.190.2
+Via: SIP/2.0/UDP 89.208.190.8:5060;branch=z9hG4bK696df228d159960509b25633eadfdb44;rport=5060
+Record-Route: <sip:89.208.190.2;lr=on;ftag=829d3099e992ab945c60434ff1ef98bf>
+From: anonymous <sip:*1014420@89.208.190.8>;tag=829d3099e992ab945c60434ff1ef98bf
+To: <sip:*1014441@89.208.190.2>;tag=as074b1151
+Call-ID: 156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2
+CSeq: 201 BYE
+User-Agent: Asterisk PBX 1.6.0.3
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY
+Supported: replaces, timer
+Contact: <sip:1014441@10.112.30.70>
+Content-Length: 0
+
+
+<------------>
+[Sep 30 16:44:56] VERBOSE[9813] logger.c:   == Spawn extension (macro-dialip9677595, s, 2) exited non-zero on 'SIP/1014441-b761e090' in macro 'dialip9677595'
+[Sep 30 16:44:56] VERBOSE[9813] logger.c:   == Spawn extension (macro-dialip9677595, s, 2) exited non-zero on 'SIP/1014441-b761e090'
+[Sep 30 16:44:56] VERBOSE[11971] logger.c: Really destroying SIP dialog '156740D4-ACEF11DE-9AE2E291-D7A3682F@213.219.200.56-b2b_2' Method: BYE

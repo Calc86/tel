@@ -1,0 +1,564 @@
+[general]
+t38pt_udptl = yes
+port = 5060
+bindaddr = 0.0.0.0
+externip=89.208.117.26
+localip=10.112.30.70
+;localnet=192.168.1.0/255.255.255.0
+language=ru
+disallow=all
+allow=alaw
+allow=g729
+allow=ulaw
+dtmfmode=rfc2833
+canreinvite=yes
+context=inbound
+callerid = Unknown
+rtptimeout=120
+rtpholdtimeout=300
+alwaysauthreject=yes
+subscribecontext = internal
+
+;register
+register => 1006520:74956639958@sip.n1.ipport.net/1006520
+register => 1007060:74956639975@sip.n1.ipport.net/1007060
+register => 1007460:74956639982@sip.n1.ipport.net/1007460
+register => 1007480:74956639983@sip.n1.ipport.net/1007480
+register => 1007660:74956639985@sip.n1.ipport.net/1007660
+register => 1008640:74956639986@sip.n1.ipport.net/1008640
+register => 1012120:74956637453@sip.n1.ipport.net/1012120
+register => 1014441:51235504@sip.n1.ipport.net/1014441
+register => 1018520:74959677595@sip.n1.ipport.net/1018520
+register => 1018540:74959677595@sip.n1.ipport.net/1018540
+register => 100001:100001@10.154.28.98/100001
+register => 100002:200001@10.154.28.98/100002
+register => 100003:300001@10.154.28.98/100003
+register => 100004:400001@10.154.28.98/100004
+register => 100005:500001@10.154.28.98/100005
+register => 74956385396*1:lt2yMj5nkqse@85.94.32.245/74956385396*1
+register => 74956385586*1:v9pYXwi8L3N5@85.94.32.248/74956385586*1
+
+;register => 74956385396*1:lt2yMj5nkqse@85.94.32.245/74956385396*1
+;register => 74956385586*1:v9pYXwi8L3N5@85.94.32.248/74956385586*1
+
+;register => 1001400:4959677581@sip.n1.ipport.net/1001400
+;register => 1001401:k2a7AwLh@sip.n1.ipport.net/1001401
+
+;[ipport1]
+;type=friend
+;host=sip.n1.ipport.net
+;username=1001400
+;secret=4959677581
+;type=friend
+;context=inbound
+;disallow=all
+;allow=alaw
+;dtmfmode=rfc2833
+;canreinvite=no
+;qualify=no
+;videosupport=no
+;t38pt_udptl=no
+;insecure=invite
+;fromdomain=sip.n1.ipport.net
+;canreinvite=no
+;fromuser=1001400
+
+;[ipport2]
+;type=friend
+;host=sip.n1.ipport.net
+;username=1001401
+;secret=k2a7AwLh
+;type=friend
+;context=inbound
+;disallow=all
+;allow=alaw
+;dtmfmode=rfc2833
+;canreinvite=no
+;qualify=no
+;videosupport=no
+;t38pt_udptl=no
+;insecure=invite
+;fromdomain=sip.n1.ipport.net
+;canreinvite=no
+;fromuser=1001401
+
+;точка входа от сервера p6639985 для 6639985, наша организация millenium
+[ip6639985]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1007660
+secret=74956639985
+context=inbound
+call-limit=10
+fromuser=1007660
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:12:p6639958] для [peer:12:6639958], наша организация [user:11:phone_autoterm]
+[ip6639958]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1006520
+secret=74956639958
+context=inbound
+call-limit=10
+fromuser=1006520
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:11:p6639975] для [peer:11:6639975], наша организация [user:6:phone_exmast]
+[ip6639975]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1007060
+secret=74956639975
+context=inbound
+call-limit=10
+fromuser=1007060
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:13:p6639982] для [peer:13:6639982], наша организация [user:6:phone_exmast]
+[ip6639982]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1007460
+secret=74956639982
+context=inbound
+call-limit=10
+fromuser=1007460
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:7:p6639983] для [peer:7:6639983], наша организация [user:9:phone_yan]
+[ip6639983]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1007480
+secret=74956639983
+context=inbound
+call-limit=10
+fromuser=1007480
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:14:p6639986] для [peer:14:6639986], наша организация [user:14:phone_larisa]
+[ip6639986]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1008640
+secret=74956639986
+;secret=banned
+context=inbound
+call-limit=10
+fromuser=1008640
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:15:p6637453] для [peer:15:6637453], наша организация [user:10:phone_atomic]
+[ip6637453]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1012120
+secret=74956637453
+context=inbound
+call-limit=10
+fromuser=1012120
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:9:p9677595] для [peer:9:9677595], наша организация [user:19:opl_1]
+[ip9677595]
+t38pt_udptl=yes
+type=friend
+host=sip.n1.ipport.net
+username=1014441
+secret=51235504
+context=inbound
+call-limit=10
+fromuser=1014441
+fromdomain=sip.n1.ipport.net
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:1:degunino1] для [peer:1:9677581b], наша организация [user:2:degunino]
+[ip9677581b]
+t38pt_udptl=yes
+type=friend
+host=10.154.28.98
+username=100001
+secret=100001
+context=inbound
+call-limit=10
+fromuser=100001
+fromdomain=10.154.28.98
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:3:degunino2] для [peer:3:9677581a], наша организация [user:2:degunino]
+[ip9677581a]
+t38pt_udptl=yes
+type=friend
+host=10.154.28.98
+username=100002
+secret=200001
+context=inbound
+call-limit=10
+fromuser=100002
+fromdomain=10.154.28.98
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:3:degunino2] для [peer:3:9677581a], наша организация [user:2:degunino]
+[ip9677581c]
+t38pt_udptl=yes
+type=friend
+host=10.154.28.98
+username=100003
+secret=300001
+context=inbound
+call-limit=10
+fromuser=100003
+fromdomain=10.154.28.98
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера [peer:3:degunino2] для [peer:3:9677581a], наша организация [user:2:degunino]
+[ip9677581d]
+t38pt_udptl=yes
+type=friend
+host=10.154.28.98
+username=100005
+secret=500001
+context=inbound
+call-limit=10
+fromuser=100005
+fromdomain=10.154.28.98
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера deg_acid для 9677581acid, наша организация acid
+[ip9677581acid]
+t38pt_udptl=yes
+type=friend
+host=10.154.28.98
+username=100004
+secret=400001
+context=inbound
+call-limit=10
+fromuser=100004
+fromdomain=10.154.28.98
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера p6385396 для 6385396, наша организация phone_azbuka
+[ip6385396]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.245
+username=74956385396*1
+secret=lt2yMj5nkqse
+context=inbound
+call-limit=10
+fromuser=74956385396*1
+fromdomain=85.94.32.245
+canreinvite=yes
+insecure=invite
+nat=yes
+
+;точка входа от сервера p6385586 для 6385586, наша организация phone_azbuka
+[ip6385586]
+t38pt_udptl=yes
+type=friend
+host=85.94.32.248
+username=74956385586*1
+secret=v9pYXwi8L3N5
+context=inbound
+call-limit=10
+fromuser=74956385586*1
+fromdomain=85.94.32.248
+canreinvite=yes
+insecure=invite
+nat=yes
+
+
+
+;sip-phone_autoterm-10065200 <-> [context:ip6639958]
+[10065200]
+t38pt_udptl=yes
+username=10065200
+secret=74956639958
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639958
+call-limit=10
+dtmfmode=inband
+canreinvite=yes
+
+;sip-phone_exmast-10070600 <-> [context:ip6639975]
+[10070600]
+t38pt_udptl=yes
+username=10070600
+secret=74956639975
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639975
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-phone_exmast-10074600 <-> [context:ip6639982]
+[10074600]
+t38pt_udptl=yes
+username=10074600
+secret=74956639982
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639982
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-phone_yan-100748 <-> [context:ip6639983]
+[100748]
+t38pt_udptl=yes
+username=100748
+secret=74956639983
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639983
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-phone_larisa-10086400 <-> [context:ip6639986]
+[10086400]
+t38pt_udptl=yes
+username=10086400
+secret=74956639986
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639986
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-phone_atomic-10121200 <-> [context:ip6637453]
+[10121200]
+t38pt_udptl=yes
+username=10121200
+secret=74956637453
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6637453
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-opl_1-10190 <-> [context:ip9677595]
+[10190]
+t38pt_udptl=yes
+username=10190
+secret=09101
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677595
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-opl_1-10191 <-> [context:ip9677595]
+[10191]
+t38pt_udptl=yes
+username=10191
+secret=19101
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677595
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-opl_1-10192 <-> [context:ip9677595]
+[10192]
+t38pt_udptl=yes
+username=10192
+secret=29101
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677595
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-acid-10210 <-> ip9677581acid
+[10210]
+t38pt_udptl=yes
+username=10210
+secret=01201
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c9677581acid
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-degunino-205 <-> [context:ip9677581b]
+[205]
+t38pt_udptl=yes
+username=205
+secret=502
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581b
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-degunino-206 <-> [context:ip9677581a]
+[206]
+t38pt_udptl=yes
+username=206
+secret=602
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581a
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-millenium-10076600 <-> ip6639985
+[10076600]
+t38pt_udptl=yes
+username=10076600
+secret=74956639985
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6639985
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;[111111]
+;t38pt_udptl=yes
+;username=111111
+;secret=111111
+;type=friend
+;qualify=no
+;nat=no
+;host=dynamic
+;context=c9677581
+;call-limit=10
+;dtmfmode=auto
+;canreinvite=yes
+
+
+;sip-phone_azbuka-10080 <-> ip6385396
+[10080]
+t38pt_udptl=yes
+username=10080
+secret=08001
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385396
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-phone_azbuka-10085 <-> ip6385586
+[10085]
+t38pt_udptl=yes
+username=10085
+secret=58001
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c6385586
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-degunino-207 <-> ip9677581c
+[207]
+t38pt_udptl=yes
+username=207
+secret=702
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581c
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+
+;sip-degunino-208 <-> ip9677581d
+[208]
+t38pt_udptl=yes
+username=208
+secret=802
+type=friend
+qualify=no
+nat=no
+host=dynamic
+context=c9677581d
+call-limit=10
+dtmfmode=auto
+canreinvite=yes
+

@@ -1,0 +1,102 @@
+body
+{
+    font-size: 8pt;
+    margin: 2px 2px 2px 2px;
+    background: #c0c0c0;
+}
+
+.body
+{
+    font-size: 10pt;
+}
+
+.sth
+{
+    font-size: 8pt;
+}
+
+.std
+{
+    font-size: 10pt;
+}
+
+#maintbl
+{
+    background-color: #cccccc;
+    border-spacing: 1px;
+    vertical-align: top;
+}
+
+#maintbl tr:nth-child(odd) td
+{
+    background-color: #e0e0e0;
+    padding: 1px;
+}
+
+#maintbl tr:nth-child(even) td
+{
+    background-color: #eeeeee;
+    padding: 1px;
+}
+
+#maintbl tr th
+{
+    background-color: #b0b0b0;
+    padding: 1px;
+    text-align: center;
+}
+
+#maintbl tr td[colspan]
+{
+    background-color: #cccccc;
+    padding: 1px;
+}
+
+form table tr td:first-child
+{
+    font-weight: bold;
+}
+
+form table:first-child
+{
+    background-color: #cccccc;
+    border-spacing: 1px;
+    vertical-align: top;
+}
+
+form table:first-child tr:nth-child(odd) td
+{
+    background-color: #e0e0e0;
+    padding: 1px;
+}
+
+form table:first-child tr:nth-child(even) td
+{
+    background-color: #eeeeee;
+    padding: 1px;
+}
+
+form input[type=text]:hover
+{
+    background-color: #ccffcc;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+

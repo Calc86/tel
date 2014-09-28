@@ -1,0 +1,20 @@
+
+[c{tel}]
+exten => _9[1-79]XXXXXX,1,Macro(dialc{tel},${EXTEN},2)
+exten => _9[1-79]XXXXXX,n,Busy
+exten => _98X.,1,Macro(dialc{tel},${EXTEN},2)
+exten => _98X.,n,Busy
+;;exten => _[1-79]XXXXXX,1,Macro(dialc{tel},${EXTEN},2)
+;;exten => _[1-79]XXXXXX,n,Busy
+;;exten => _8X.,1,Macro(dialc{tel},${EXTEN},2)
+;;exten => _8X.,n,Busy
+;exten => _X.,1,Macro(dialc{tel},${EXTEN},2)
+;exten => _X.,n,Macro(dialc{tel},${EXTEN},1)
+;exten => _X.,n,Busy
+
+[macro-dialc{tel}]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip{tel}/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+

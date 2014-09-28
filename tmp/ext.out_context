@@ -1,0 +1,10 @@
+
+; internal => [user:{oid}:{org}] => [peer:{pid}:p{tel_id}] => Internet
+[c{tel_id}]{dial_opts}
+exten => _X.,1,Macro(dialc,${EXTEN},ip{tel_id},${TRUNK_OPTS})
+exten => _X.,n,Busy
+;; 
+;;[macro-dialc{tel_id}]
+;;exten => s,1,Goto(startdial)
+;;exten => s,n(startdial),Dial(SIP/ip{tel_id}/${ARG1},100,T)
+;;exten => s,n,Noop(Fail failed)

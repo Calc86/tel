@@ -1,0 +1,24 @@
+#импорт из master.csv
+#/usr/bin/php /var/lib/asterisk/cdrimport/import.php /var/log/asterisk/cdr-csv/Master.csv >> /var/log/asterisk/import.log
+/usr/bin/php /var/www/html/ext1/cron/import.php /var/log/asterisk/cdr-csv/Master.csv >> /var/log/asterisk/import.log
+#заполнение нашей таблицы статистики
+/usr/bin/php /var/www/html/ext1/cron/stat.php >> /var/log/asterisk/stat.log
+#вычисление кодов и направлений
+/usr/bin/php /var/www/html/ext1/cron/kod.php >> /var/log/asterisk/kod.log
+#вычисление стоимости звонков
+/usr/bin/php /var/www/html/ext1/cron/cost.php >> /var/log/asterisk/cost.log
+#rotate нашего csv
+/usr/sbin/logrotate /var/www/html/ext1/cron/logrotate.conf
+#записать "положение" клиентов
+/usr/sbin/asterisk -rx "sip show peers" > /var/www/html/ext1/cron/map
+#конвертация в МП3
+/usr/bin/php /var/www/html/ext1/cron/tomp3.php >> /var/log/asterisk/tomp3.log
+
+/bin/sh /var/www/html/ext1/cron/get_ast_db
+
+#ping
+/usr/bin/php /var/www/html/ext1/cron/ping.php >> /var/log/asterisk/ping.log
+/usr/sbin/fping -r 3 -f /var/www/html/ext1/cron/in > /var/www/html/ext1/cron/out
+
+#удалить старые звонки, а то ай яй яй будет
+/usr/bin/php /var/www/html/ext1/cron/call-clear.php

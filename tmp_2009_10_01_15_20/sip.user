@@ -1,0 +1,16 @@
+;sip-{org}-{intno} <-> [context:ip{tel}]
+[{intno}]
+t38pt_udptl = yes
+username={intno}
+secret={secret}
+type=friend
+qualify=no
+nat=yes
+host=dynamic
+context=c{tel}
+call-limit=10
+dtmfmode=rfc2833
+;callerid=100001
+canreinvite=yes
+;fromuser=100001
+{params}

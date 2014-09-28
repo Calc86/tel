@@ -1,0 +1,561 @@
+[general]
+clearglobalvars=yes
+
+[globals]
+
+;исходящие звонки, звонки, которые совершают наши пользователи
+
+; internal => [user:11:phone_autoterm] => [peer:12:p6639958] => Internet
+[c6639958]
+exten => _X.,1,Macro(dialc6639958,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc6639958]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6639958/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+
+; internal => [user:6:phone_exmast] => [peer:11:p6639975] => Internet
+[c6639975]
+exten => _X.,1,Macro(dialc6639975,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc6639975]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6639975/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+
+; internal => [user:6:phone_exmast] => [peer:13:p6639982] => Internet
+[c6639982]
+exten => _X.,1,Macro(dialc6639982,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc6639982]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6639982/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+
+; internal => [user:9:phone_yan] => [peer:7:p6639983] => Internet
+[c6639983]
+exten => _X.,1,Macro(dialc6639983,${EXTEN},2)
+exten => _X.,n,Busy
+exten => _8499.,1,Macro(dialc6639983,${EXTEN},2)
+exten => _8499.,n,Busy
+exten => _8495.,1,Macro(dialc6639983,${EXTEN},2)
+exten => _8495.,n,Busy
+exten => _8X.,1,Macro(dialc1903_4,${EXTEN},2)
+exten => _8X.,n,Busy
+
+[macro-dialc1903_4]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip1903_4/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+[macro-dialc6639983]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6639983/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+
+; internal => [user:14:phone_larisa] => [peer:14:p6639986] => Internet
+[c6639986]
+exten => _X.,1,Macro(dialc6639986,${EXTEN},2)
+exten => _X.,n,Busy
+exten => _8499.,1,Macro(dialc6639986,${EXTEN},2)
+exten => _8499.,n,Busy
+exten => _8495.,1,Macro(dialc6639986,${EXTEN},2)
+exten => _8495.,n,Busy
+exten => _8X.,1,Macro(dialc1903_1,${EXTEN},2)
+exten => _8X.,n,Busy
+
+[macro-dialc1903_1]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip1903_1/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+[macro-dialc6639986]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6639986/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+
+; internal => [user:10:phone_atomic] => [peer:15:p6637453] => Internet
+[c6637453]
+exten => _X.,1,Macro(dialc6637453,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc6637453]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6637453/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+
+; internal => [user:19:opl_1] => [peer:9:p9677595] => Internet
+[c9677595]
+exten => 101,1,Noop(opl_1-internal-101)
+exten => 101,n,Macro(dialip9677595,SIP/10190)
+exten => 101,n,Busy
+exten => 102,1,Noop(opl_1-internal-102)
+exten => 102,n,Macro(dialip9677595,SIP/10191)
+exten => 102,n,Busy
+exten => 103,1,Noop(opl_1-internal-103)
+exten => 103,n,Macro(dialip9677595,SIP/10192)
+exten => 103,n,Busy
+exten => _X.,1,Macro(dialc9677595,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc9677595]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip9677595/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+; internal => [user:2:degunino] => [peer:1:degunino1] => Internet
+[c9677581b]
+exten => _9[1-79]XXXXXX,1,Macro(dialc9677581b,${EXTEN},2)
+exten => _9[1-79]XXXXXX,n,Busy
+exten => _98495X.,1,Macro(dialc9677581b,${EXTEN},2)
+exten => _98499X.,n,Busy
+
+exten => _98X.,1,Macro(dialc1903_2,${EXTEN:1},2)
+exten => _98X.,n,Busy
+
+exten => _6[1-79]XXXXXX,1,Macro(dialc9677581b,${EXTEN},2)
+exten => _6[1-79]XXXXXX,n,Busy
+exten => _68X.,1,Macro(dialc9677581b,${EXTEN},2)
+exten => _68X.,n,Busy
+
+exten => _3XX,1,Macro(dialc9677581b,${EXTEN},2)
+exten => _3XX,n,Busy
+exten => _XXXXX,1,Macro(dialc9677581b,${EXTEN},2)
+exten => _XXXXX,n,Busy
+
+[macro-dialc9677581b]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip9677581b/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+[macro-dialc1903_2]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip1903_2/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+[c9677581a]
+exten => _9[1-79]XXXXXX,1,Macro(dialc9677581a,${EXTEN},2)
+exten => _9[1-79]XXXXXX,n,Busy
+exten => _98X.,1,Macro(dialc9677581a,${EXTEN},2)
+exten => _98X.,n,Busy
+
+exten => _6[1-79]XXXXXX,1,Macro(dialc9677581a,${EXTEN},2)
+exten => _6[1-79]XXXXXX,n,Busy
+exten => _68X.,1,Macro(dialc9677581a,${EXTEN},2)
+exten => _68X.,n,Busy
+
+;exten => _3XX,1,Set(__TRANSFER_CONTEXT=woohoo)
+;exten => _3XX,n,Noop(transfer - ${TRANSFER_CONTEXT})
+exten => _3XX,1,Macro(dialc9677581a,${EXTEN},2)
+exten => _3XX,n,Busy
+exten => _XXXXX,1,Macro(dialc9677581a,${EXTEN},2)
+exten => _XXXXX,n,Busy
+
+[macro-dialc9677581a]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip9677581a/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+[c9677581c]
+exten => _9[1-79]XXXXXX,1,Macro(dialc9677581c,${EXTEN},2)
+exten => _9[1-79]XXXXXX,n,Busy
+exten => _98X.,1,Macro(dialc9677581c,${EXTEN},2)
+exten => _98X.,n,Busy
+
+exten => _6[1-79]XXXXXX,1,Macro(dialc9677581c,${EXTEN},2)
+exten => _6[1-79]XXXXXX,n,Busy
+exten => _68X.,1,Macro(dialc9677581c,${EXTEN},2)
+exten => _68X.,n,Busy
+
+;exten => _3XX,1,Set(__TRANSFER_CONTEXT=woohoo)
+;exten => _3XX,n,Noop(transfer - ${TRANSFER_CONTEXT})
+exten => _3XX,1,Macro(dialc9677581c,${EXTEN},2)
+exten => _3XX,n,Busy
+exten => _XXXXX,1,Macro(dialc9677581c,${EXTEN},2)
+exten => _XXXXX,n,Busy
+
+[macro-dialc9677581c]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip9677581c/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+[c9677581d]
+exten => _9[1-79]XXXXXX,1,Macro(dialc9677581d,${EXTEN},2)
+exten => _9[1-79]XXXXXX,n,Busy
+exten => _98495X.,1,Macro(dialc9677581d,${EXTEN},2)
+exten => _98499X.,n,Busy
+
+exten => _98X.,1,Macro(dialc1903_3,${EXTEN:1},2)
+exten => _98X.,n,Busy
+
+exten => _6[1-79]XXXXXX,1,Macro(dialc9677581d,${EXTEN},2)
+exten => _6[1-79]XXXXXX,n,Busy
+exten => _68X.,1,Macro(dialc9677581d,${EXTEN},2)
+exten => _68X.,n,Busy
+
+;exten => _3XX,1,Set(__TRANSFER_CONTEXT=woohoo)
+;exten => _3XX,n,Noop(transfer - ${TRANSFER_CONTEXT})
+exten => _3XX,1,Macro(dialc9677581d,${EXTEN},2)
+exten => _3XX,n,Busy
+exten => _XXXXX,1,Macro(dialc9677581d,${EXTEN},2)
+exten => _XXXXX,n,Busy
+
+
+[macro-dialc1903_3]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip1903_3/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+[macro-dialc9677581d]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip9677581d/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+[woohoo]
+exten => s,1,Noop(we are in WOOHOO)
+exten => s,n,Busy
+
+[c9677581]
+exten => _X.,1,Macro(dialc9677581,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc9677581]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ipport1/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+; internal => phone_azbuka => p6385396 => Internet
+[c6385396]
+exten => _X.,1,Macro(dialc6385396,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc6385396]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6385396/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+
+; internal => phone_azbuka => p6385586 => Internet
+[c6385586]
+exten => _X.,1,Macro(dialc6385586,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc6385586]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6385586/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+; internal => degunino => degunino3 => Internet
+[c9677581c]
+exten => _X.,1,Macro(dialc9677581c,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc9677581c]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip9677581c/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+; internal => acid => deg_acid => Internet
+[c9677581acid]
+exten => _X.,1,Macro(dialc9677581acid,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc9677581acid]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip9677581acid/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+; internal => globalauto => p7218798 => Internet
+[c7218798]
+exten => _X.,1,Macro(dialc7218798,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc7218798]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip7218798/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+; internal => dmitrovskoe => p6428607 => Internet
+[c6428607]
+exten => _X.,1,Macro(dialc6428607,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc6428607]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6428607/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+[inbound]
+exten => 1006520,1,Noop(phone_autoterm-p6639958)
+exten => 1006520,n,Macro(dialip6639958,SIP/10065200)
+exten => 1006520,n,Busy
+exten => 1007060,1,Noop(phone_exmast-p6639975)
+exten => 1007060,n,Macro(dialip6639975,SIP/10070600)
+exten => 1007060,n,Busy
+exten => 1007460,1,Noop(phone_exmast-p6639982)
+exten => 1007460,n,Macro(dialip6639982,SIP/10074600)
+exten => 1007460,n,Busy
+exten => 1007480,1,Noop(phone_yan-p6639983)
+exten => 1007480,n,Macro(dialip6639983,SIP/100748)
+exten => 1007480,n,Busy
+exten => 1007660,1,Noop(millenium-p6639985)
+exten => 1007660,n,Macro(dialip6639985,SIP/10076600)
+exten => 1007660,n,Busy
+exten => 1008640,1,Noop(phone_larisa-p6639986)
+exten => 1008640,n,Macro(dialip6639986,SIP/10086400)
+exten => 1008640,n,Busy
+exten => 1012120,1,Noop(phone_atomic-p6637453)
+exten => 1012120,n,Macro(dialip6637453,SIP/10121200)
+exten => 1012120,n,Busy
+exten => 1014441,1,Noop(opl_1-p9677595)
+exten => 1014441,n,Macro(dialip9677595,SIP/10190&SIP/10191&SIP/10192)
+exten => 1014441,n,Busy
+exten => 1018520,1,Noop(opl_1-p9677595)
+exten => 1018520,n,Macro(dialip9677595,SIP/10190&SIP/10191&SIP/10192)
+exten => 1018520,n,Busy
+exten => 1018540,1,Noop(opl_1-p9677595)
+exten => 1018540,n,Macro(dialip9677595,SIP/10190&SIP/10191&SIP/10192)
+exten => 1018540,n,Busy
+exten => 1001400,1,Noop(tt1-p977581)
+exten => 1001400,n,Macro(dialip9677595,SIP/111111)
+exten => 1001400,n,Busy
+exten => 1001401,1,Noop(tt2-p9677581)
+exten => 1001401,n,Macro(dialip9677595,SIP/111111)
+exten => 1001401,n,Busy
+exten => 100001,1,Noop(degunino-degunino1)
+exten => 100001,n,Macro(dialip9677581b,SIP/205)
+exten => 100001,n,Busy
+exten => 100002,1,Noop(degunino-degunino2)
+exten => 100002,n,Macro(dialip9677581a,SIP/206)
+exten => 100002,n,Busy
+exten => 100003,1,Noop(degunino-degunino3)
+exten => 100003,n,Macro(dialip9677581c,SIP/207)
+exten => 100003,n,Busy
+exten => 100004,1,Noop(acid-deg_acid)
+exten => 100004,n,Macro(dialip9677581acid,SIP/10210)
+exten => 100004,n,Busy
+exten => 100005,1,Noop(degunino-degunino5)
+exten => 100005,n,Macro(dialip9677581d,SIP/208)
+exten => 100005,n,Busy
+exten => 1014421,1,Noop(globalauto-p7218798)
+exten => 1014421,n,Macro(dialip7218798,SIP/10220)
+exten => 1014421,n,Busy
+exten => 1014461,1,Noop(dmitrovskoe-p6428607)
+exten => 1014461,n,Macro(dialip6428607,SIP/10230)
+exten => 1014461,n,Busy
+exten => 74956385396*1,1,Noop(phone_azbuka-p6385396)
+exten => 74956385396*1,n,Macro(dialip6385396,SIP/10080)
+exten => 74956385396*1,n,Busy
+exten => 74956385586*1,1,Noop(phone_azbuka-p6385586)
+exten => 74956385586*1,n,Macro(dialip6385586,SIP/10085)
+exten => 74956385586*1,n,Busy
+;exten => s,n,Busy
+
+
+;входящие звонки, звонки, которые идут с других серверов на наш
+
+;[ip6385396]
+;exten => 74956385396*1,1,Macro(dialip6385396,SIP/10080)
+;exten => 74956385396*1,n,Busy
+
+;Из Internet=>p6385396=>inbound=>phone_azbuka=>internal
+[macro-dialip6385396]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+
+;[ip6385586]
+;exten => 74956385586*1,1,Macro(dialip6385586,SIP/10085)
+;exten => 74956385586*1,n,Busy
+
+;Из Internet=>p6385586=>inbound=>phone_azbuka=>internal
+[macro-dialip6385586]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+;[ip6639958]
+;exten => 1006520,1,Macro(dialip6639958,SIP/10065200)
+;exten => 1006520,n,Busy
+
+;Из Internet=>[peer:12:p6639958]=>[csip:inbound]=>[user:11:phone_autoterm]=>internal
+[macro-dialip6639958]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+;[ip9677581acid]
+;exten => 100004,1,Macro(dialip9677581acid,SIP/10210)
+;exten => 100004,n,Busy
+
+;Из Internet=>deg_acid=>inbound=>acid=>internal
+[macro-dialip9677581acid]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+;[ip7218798]
+;exten => 1014421,1,Macro(dialip7218798,SIP/10220)
+;exten => 1014421,n,Busy
+
+;Из Internet=>p7218798=>inbound=>globalauto=>internal
+[macro-dialip7218798]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+;[ip6428607]
+;exten => 1014461,1,Macro(dialip6428607,SIP/10230)
+;exten => 1014461,n,Busy
+
+;Из Internet=>p6428607=>inbound=>dmitrovskoe=>internal
+[macro-dialip6428607]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+;[ip6639975]
+;exten => 1007060,1,Macro(dialip6639975,SIP/10070600)
+;exten => 1007060,n,Busy
+
+;Из Internet=>[peer:11:p6639975]=>[csip:inbound]=>[user:6:phone_exmast]=>internal
+[macro-dialip6639975]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+
+;[ip6639982]
+;exten => 1007460,1,Macro(dialip6639982,SIP/10074600)
+;exten => 1007460,n,Busy
+
+;Из Internet=>[peer:13:p6639982]=>[csip:inbound]=>[user:6:phone_exmast]=>internal
+[macro-dialip6639982]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+
+;[ip6639983]
+;exten => 1007480,1,Macro(dialip6639983,SIP/100748)
+;exten => 1007480,n,Busy
+
+;Из Internet=>[peer:7:p6639983]=>[csip:inbound]=>[user:9:phone_yan]=>internal
+[macro-dialip6639983]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+
+;[ip6639986]
+;exten => 1008640,1,Macro(dialip6639986,SIP/10086400)
+;exten => 1008640,n,Busy
+
+;Из Internet=>[peer:14:p6639986]=>[csip:inbound]=>[user:14:phone_larisa]=>internal
+[macro-dialip6639986]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+
+;[ip6637453]
+;exten => 1012120,1,Macro(dialip6637453,SIP/10121200)
+;exten => 1012120,n,Busy
+
+;Из Internet=>[peer:15:p6637453]=>[csip:inbound]=>[user:10:phone_atomic]=>internal
+[macro-dialip6637453]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+
+;[ip9677595]
+;exten => 1014441,1,Macro(dialip9677595,SIP/10190&SIP/10191&SIP/10192)
+;exten => 1014441,n,Busy
+
+;Из Internet=>[peer:9:p9677595]=>[csip:inbound]=>[user:19:opl_1]=>internal
+[macro-dialip9677595]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+
+;[ip9677581b]
+;exten => 100001,1,Macro(dialip9677581b,SIP/205)
+;exten => 100001,n,Busy
+
+;Из Internet=>[peer:1:degunino1]=>[csip:inbound]=>[user:2:degunino]=>internal
+[macro-dialip9677581b]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+
+;[ip9677581a]
+;exten => 100002,1,Macro(dialip9677581a,SIP/206)
+;exten => 100002,n,Busy
+
+;Из Internet=>[peer:3:degunino2]=>[csip:inbound]=>[user:2:degunino]=>internal
+[macro-dialip9677581a]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+;[ip9677581c]
+;exten => 100002,1,Macro(dialip9677581c,SIP/207)
+;exten => 100002,n,Busy
+
+;Из Internet=>[peer:3:degunino2]=>[csip:inbound]=>[user:2:degunino]=>internal
+[macro-dialip9677581c]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+;[ip9677581d]
+;exten => 100002,1,Macro(dialip9677581d,SIP/208)
+;exten => 100002,n,Busy
+
+;Из Internet=>[peer:3:degunino2]=>[csip:inbound]=>[user:2:degunino]=>internal
+[macro-dialip9677581d]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+
+
+; internal => millenium => p6639985 => Internet
+[c6639985]
+exten => _X.,1,Macro(dialc6639985,${EXTEN},2)
+exten => _X.,n,Busy
+
+[macro-dialc6639985]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(SIP/ip6639985/${ARG1},100,T)
+exten => s,n,Noop(Fail failed)
+
+
+;[ip6639985]
+;exten => 1007660,1,Macro(dialip6639985,SIP/10076600)
+;exten => 1007660,n,Busy
+
+;Из Internet=>p6639985=>inbound=>millenium=>internal
+[macro-dialip6639985]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+
+[macro-dialip9677581]
+exten => s,1,Goto(startdial)
+exten => s,n(startdial),Dial(${ARG1},100,t)
+exten => s,n,Noop(Fail failed)
+

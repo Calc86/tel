@@ -1,0 +1,65 @@
+Loaded plugins: fastestmirror
+Setting up Group Process
+Loading mirror speeds from cached hostfile
+ * fedora: fedora-mirror01.rbc.ru
+ * rpmfusion-free: mirror.yandex.ru
+ * rpmfusion-free-updates: mirror.yandex.ru
+ * rpmfusion-nonfree: mirror.yandex.ru
+ * rpmfusion-nonfree-updates: mirror.yandex.ru
+ * updates: fedora-mirror01.rbc.ru
+Installed Groups:
+   Administration Tools
+   Base
+   Dial-up Networking Support
+   Engineering and Scientific
+   Fonts
+   Graphics
+   Hardware Support
+   Input Methods
+   Legacy Fonts
+   Mail Server
+   MySQL Database
+   Network Servers
+   Printing Support
+   System Tools
+   Text-based Internet
+   Web Server
+Available Groups:
+   Authoring and Publishing
+   Clustering
+   DNS Name Server
+   Development Libraries
+   Development Tools
+   Editors
+   Educational Software
+   FTP Server
+   Fedora Eclipse
+   Fedora Packager
+   GNOME Desktop Environment
+   GNOME Software Development
+   Games and Entertainment
+   Graphical Internet
+   Haskell Development
+   Java
+   Java Development
+   KDE (K Desktop Environment)
+   KDE Software Development
+   LXDE
+   Legacy Network Server
+   Legacy Software Development
+   News Server
+   Office/Productivity
+   Perl Development
+   PostgreSQL Database
+   SUGAR Desktop Environment
+   Server Configuration Tools
+   Sound and Video
+   Virtualization
+   Web Development
+   Window Managers
+   Windows File Server
+   X Software Development
+   X Window System
+   XFCE
+   XFCE Software Development
+Done
