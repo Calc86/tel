@@ -7,6 +7,13 @@ body
 	background: #EFEFEF;
 }
 
+pre
+{
+    font-size: 0.9em;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
 #page
 {
 	margin-top: 5px;

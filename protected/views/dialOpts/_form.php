@@ -15,8 +15,6 @@
 	'enableAjaxValidation'=>true,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
@@ -32,6 +30,20 @@
 		<?php echo $form->error($model,'oid'); ?>
 	</div>
 
+    <div class="row">
+        <?php echo $form->labelEx($model,'rule'); ?>
+        <?php echo $form->textField($model,'rule',array('maxlength'=>255)); ?>
+        <?php echo $form->error($model,'rule'); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'prior'); ?>
+        <?php echo $form->textField($model,'prior'); ?>
+        <?php echo $form->error($model,'prior'); ?>
+    </div>
+
+    <br><h3>Внешняя маршрутизация</h3>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'pid1'); ?>
         <?php
@@ -40,7 +52,7 @@
                 Peers::model()->findAllByAttributes(array('oid'=>$model->oid)),
                 'id','name'
             );
-        $list = array_merge(array('0'=>'Не выбран'),$list);
+        $list = array_merge(array('0'=>'Для всех'),$list);
         echo $form->dropDownList($model,'pid1',$list);
         ?>
 		<?php echo $form->error($model,'pid1'); ?>
@@ -54,23 +66,13 @@
                 Peers::model()->findAllByAttributes(array('oid'=>$model->oid)),
                 'id','name'
             );
-        $list = array_merge(array('0'=>'Не выбран'),$list);
+        $list = array_merge(array('0'=>'Для всех'),$list);
         echo $form->dropDownList($model,'pid2',$list);
         ?>
 		<?php echo $form->error($model,'pid2'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'rule'); ?>
-		<?php echo $form->textField($model,'rule',array('maxlength'=>255)); ?>
-		<?php echo $form->error($model,'rule'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'prior'); ?>
-		<?php echo $form->textField($model,'prior'); ?>
-		<?php echo $form->error($model,'prior'); ?>
-	</div>
+    <br>
+    <h3>Внутренняя маршрутизация</h3>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'internal'); ?>
@@ -90,7 +92,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'context'); ?>
         <?php
-        $list = array("out1"=>"out1","dialc"=>"dialc");
+        $list = array("out1"=>"out1", "dialc"=>"dialc");
         echo $form->dropDownList($model,'context',$list);
         ?>
 		<?php echo $form->error($model,'context'); ?>
@@ -99,6 +101,8 @@
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Добавить' : 'Сохранить'); ?>
 	</div>
+
+    <p class="note">Fields with <span class="required">*</span> are required.</p>
 
 <?php $this->endWidget(); ?>
 

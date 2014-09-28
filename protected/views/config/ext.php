@@ -10,9 +10,11 @@ $this->breadcrumbs=array(
     'oExt'=>array('oext'),
     'oSip'=>array('osip')
 );
+
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 
-<pre>
-<?php echo $model->ext ?>
-</pre>
+<?php
+    echo new AsteriskHttpConfig($model->ext);
+?>
+

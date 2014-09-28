@@ -2,6 +2,7 @@
   <dictionary name="calc">
     <words>
       <w>dtmf</w>
+      <w>exten</w>
       <w>passwd</w>
       <w>sended</w>
     </words>

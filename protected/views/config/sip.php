@@ -11,6 +11,6 @@ $this->breadcrumbs=array(
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 
-<pre>
-<?php echo $model->sip; ?>
-</pre>
+<?php
+    echo new AsteriskHttpConfig($model->sip);
+?>

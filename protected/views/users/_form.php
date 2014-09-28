@@ -32,6 +32,12 @@
 		<?php echo $form->error($model,'oid'); ?>
 	</div>
 
+<?php
+    if($model->isNewRecord){
+        $model->intno = 10000 + $model->oid * 10;
+        $model->secret = substr(md5(time() + rand()), 0, 5 + rand(0, 3));
+    }
+?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'intno'); ?>
 		<?php echo $form->textField($model,'intno',array('maxlength'=>20)); ?>

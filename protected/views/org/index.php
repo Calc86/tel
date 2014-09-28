@@ -38,8 +38,14 @@ $this->menu=array(
         'fullname',
         array(
             //'title'=>'intno',
+            'header'=>'intno',
             'type'=>'raw',
             'value'=>'$data->user_list',
+        ),
+        array(
+            //'title'=>'intno',
+            'type'=>'raw',
+            'value'=>'$data->peer_list',
         ),
     ),
 )); ?>

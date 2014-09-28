@@ -20,6 +20,7 @@
 class Org extends LogActiveRecord
 {
     public $user_list = '';
+    public $peer_list = '';
 
 	/**
 	 * @return string the associated database table name
@@ -38,6 +39,15 @@ class Org extends LogActiveRecord
         }
 
         $this->user_list = implode(', ',$u);
+
+        $p = array();
+        foreach($this->peers as $peer){
+            /** @var $peer Peers */
+            $p[] = $peer->name;
+        }
+
+        $this->peer_list = implode(', ', $p);
+
     }
 
     protected function getName($name=''){

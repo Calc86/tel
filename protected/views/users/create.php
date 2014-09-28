@@ -1,7 +1,6 @@
 <?php
 /* @var $this UsersController */
 /* @var $model Users */
-/* @var $oid */
 
 $this->breadcrumbs=array(
 	'Линии'=>array('index'),
@@ -9,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Список', 'url'=>array('index')),
+	array('label'=>'Список', 'url'=>array('index', 'id' => $model->oid)),
 	//array('label'=>'Manage Users', 'url'=>array('admin')),
 );
 ?>

@@ -41,7 +41,7 @@ $path = '/etc/asterisk/bak/';
 $d = dir($path);
 //echo "Handle: " . $d->handle . "\n";
 //echo "Path: " . $d->path . "\n";
-$baks = "";
+$baks = array();
 $i=0;
 
 while (false !== ($entry = $d->read()))
