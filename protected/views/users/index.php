@@ -1,6 +1,7 @@
 <?php
 /* @var $this UsersController */
 /* @var $dataProvider CActiveDataProvider */
+/* @var $dataProviderIP CActiveDataProvider */
 
 $this->breadcrumbs=array(
 	'Организация',
@@ -67,6 +68,20 @@ $this->menu=array(
 ?>
 
 <i>* - имеется привязка по IP</i><br><br><br>
+
+<h6>Привязка по IP</h6>
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider'=>$dataProviderIP,
+    'columns'=>array(
+        array(  //ID
+            'name'=>'id',
+            'type'=>'raw',
+            'value'=>'CHtml::link($data->id,Yii::app()->createUrl("Peers/view",array("id"=>$data->primaryKey)))',
+        ),
+        'ip',
+        'mask'
+    ),
+)); ?>
 
 
     <h6>Номера</h6>

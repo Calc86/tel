@@ -185,6 +185,20 @@ class UsersController extends Controller
         );
         $dataProviderDev->pagination = false;
 
+        $dataProviderIP=new CActiveDataProvider('OrgIp',
+            array(
+                'criteria'=>array(
+                    'condition' => 'org_id='.$oid,    //SQL where
+                    //'with'=>'user', //model relations
+                    //'order'=>'name',
+                ),
+                'sort'=>array(
+                    'defaultOrder'=>'ip ASC',
+                )
+            )
+        );
+        $dataProviderIP->pagination = false;
+
         $ast = new AstCLI();
 
 		$this->render('index',array(
@@ -192,6 +206,7 @@ class UsersController extends Controller
             'dataProviderOpts'=>$dataProviderOpts,
             'dataProviderPeers'=>$dataProviderPeers,
             'dataProviderDev'=>$dataProviderDev,
+            'dataProviderIP'=>$dataProviderIP,
             'ast' =>$ast,
             'oid' => $oid,
 		));

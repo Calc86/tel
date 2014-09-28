@@ -106,6 +106,7 @@ class Sip extends CFormModel
 
         $users = $org->users;
         foreach($users as $user){
+            /** @var $user Users */
             if(!$user->pid) continue; //не принадлежим пиру, значит мы не нужны
             if($user->peer->ban) continue;  //с забанеными пирами не выводим
 

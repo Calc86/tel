@@ -80,6 +80,7 @@ class AstCLI extends CFormModel
         if(count($data->org->ip)) $star = '*';
         $id = $data->org->id;
         $ip = $this->get_user_ip($data->intno);
+        if($ip == "Unknown") $ip = "Not registered";
         return $star.$ip;
     }
 
