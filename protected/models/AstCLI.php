@@ -11,10 +11,42 @@ class AstCLI extends CFormModel
 {
     public $db;
     public $reg;
+    public $channels;
 
     public function init(){
         $this->init_db();
         $this->init_registry();
+        $this->channels = $this->sip_show_channels();
+    }
+
+    /**
+     * @param $id string name to cache
+     * @param $cmd string asterisk -n -rx "command"
+     * @param $to int timeout ti expire, 0 - no cache
+     * @return array
+     */
+    protected function execute($id, $cmd, $to=0){
+        $dump = Yii::app()->cache->get($id);
+        if($dump === false)
+        {
+            $dump = `$cmd`;
+            if($to != 0) Yii::app()->cache->set($id, $dump, $to);
+        }
+
+        $lines = explode("\n",$dump);
+        //вынуть мусор
+        array_shift($lines);    //спереди/заголовки
+        array_pop($lines);      //сзади
+        array_pop($lines);
+        return $lines;
+    }
+
+    private function sip_show_channels(){
+        return $this->execute("sip show channels", 'sudo asterisk -n -rx "sip show channels"', 9);
+    }
+
+    public function sip_show_channel($id){
+        return $this->execute("sip show channel ".$id, 'sudo asterisk -n -rx "sip show channel '.$id.'"', 60);
     }
 
     private function init_db(){

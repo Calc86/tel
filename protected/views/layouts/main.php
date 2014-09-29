@@ -45,6 +45,7 @@
                 array('label'=>'PEER', 'url'=>array('/peers/index')),
                 array('label'=>'Price', 'url'=>array('/price/table')),
                 array('label'=>'Config', 'url'=>array('/config/save')),
+                array('label'=>'Asterisk', 'url'=>array('/asterisk/channels')),
                 array('label'=>'Оборудование', 'url'=>array('/devices/index')),
                 array('label'=>'Провайдеры', 'url'=>array('/pt/index')),
                 array('label'=>'Номера', 'url'=>array('/numPool/index')),
