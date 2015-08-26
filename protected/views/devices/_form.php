@@ -20,19 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'dtype'); ?>
-        <?php
-        $list =
-            CHtml::listData(
-                Dtypes::model()->findAll(array('order' => 'name')),
-                'id','name'
-            );
-        echo $form->dropDownList($model,'dtype',$list);
-        ?>
-		<?php echo $form->error($model,'dtype'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'oid'); ?>
         <?php
         $list =
@@ -44,6 +31,19 @@
         ?>
 		<?php echo $form->error($model,'oid'); ?>
 	</div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'dtype'); ?>
+        <?php
+        $list =
+            CHtml::listData(
+                Dtypes::model()->findAll(array('order' => 'name')),
+                'id','name'
+            );
+        echo $form->dropDownList($model,'dtype',$list);
+        ?>
+        <?php echo $form->error($model,'dtype'); ?>
+    </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ip'); ?>

@@ -1,0 +1,135 @@
+--------------------------------------------------------------------------------
+Command base-URL: /exec/show/configuration User ID: root 
+
+--------------------------------------------------------------------------------
+
+Using 1987 out of 65332 bytes 
+! 
+version 8.237 
+! 
+hostname AP200 
+! 
+dhcp-list 0 type server 
+dhcp-list 0 address server interface ether0.0 
+dhcp-list 0 option dhcp-lease-time 7200 
+! 
+dhcp-list 1 type server 
+dhcp-list 1 address server 10.1.1.2 10.1.1.254 255.255.255.0 
+dhcp-list 1 option dhcp-lease-time 600 
+! 
+! 
+ip-share enable 
+ip-share interface net-side ether0.0 
+ip-share interface local-side ether1.0 
+! 
+interface ether0.0 
+ ip address 10.154.28.99 255.255.255.0 
+  qos-control 200 100 
+  ! 
+  interface ether1.0 
+   no ip address 
+   ! 
+   snmp name 7107454(1L) 
+   ! 
+   no arp reset 
+   ! 
+   route 0.0.0.0 0.0.0.0 10.154.28.253 
+   ! 
+   dnshost nameserver 10.112.1.1 
+   dnshost nameserver 213.248.0.6 
+   ! 
+   service snmpd 
+   ! 
+   auto-script autorun.inf 
+   ! 
+   ! 
+   ! 
+   ! 
+   ! 
+   ! VoIP configuration. 
+   ! 
+   ! 
+   ! Voice service voip configuration. 
+   ! 
+   voice service voip 
+    fax protocol t38 redundancy 0 
+     fax rate 9600 
+      h323 call start fast 
+       h323 call tunnel enable 
+        busyout monitor gatekeeper 
+         no busyout monitor callagent 
+          busyout monitor voip-interface 
+          ! 
+          ! 
+          ! Voice port configuration. 
+          ! 
+          ! FXS 
+          voice-port 0/0 
+           caller-id enable 
+           ! 
+           ! 
+           ! FXS 
+           voice-port 0/1 
+            caller-id enable 
+            ! 
+            ! 
+            ! 
+            ! 
+            ! Pots peer configuration. 
+            ! 
+            dial-peer voice 0 pots 
+             destination-pattern 1001400 
+              port 0/0 
+               user-password 4959677581 
+               ! 
+               dial-peer voice 1 pots 
+                destination-pattern 1001401 
+                 port 0/1 
+                  user-password k2a7AwLh 
+                  ! 
+                  ! 
+                  ! 
+                  ! Voip peer configuration. 
+                  ! 
+                  dial-peer voice 10 voip 
+                   destination-pattern T 
+                    session target sip-server 
+                     session protocol sip 
+                      voice-class codec 1 
+                       dtmf-relay rtp-2833 
+                        no vad 
+                         fax protocol bypass 
+                          fax rate disable 
+                          ! 
+                          ! 
+                          ! 
+                          ! 
+                          ! 
+                          ! 
+                          ! Gateway configuration. 
+                          ! 
+                          gateway 
+                           h323-id 34535267@msm.ru 
+                            security password 1001035 
+                             public-ip 89.208.116.61 
+                             ! 
+                             ! 
+                             ! SIP UA configuration. 
+                             ! 
+                             sip-ua 
+                              sip-server sip.n1.ipport.net 
+                               register e164 
+                               ! 
+                               ! 
+                               ! MGCP configuration. 
+                               ! 
+                               mgcp 
+                                codec g711ulaw 
+                                ! 
+                                ! 
+                                ! Tones 
+                                ! 
+                                ! 
+                                ! 
+                                ! 
+                                --------------------------------------------------------------------------------

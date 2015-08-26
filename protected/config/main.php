@@ -99,6 +99,9 @@ return array(
                 array('host'=>'localhost', 'port'=>11211, 'weight'=>10),
             ),
         ),
+        /*'cache'=>array(
+            'class'=>'system.caching.CApcCache',
+        ),*/
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

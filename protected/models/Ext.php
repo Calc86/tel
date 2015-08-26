@@ -40,6 +40,7 @@ class Ext extends CFormModel
         $organisations = Org::model()->findAll();
         //входящая маршрутизация
         foreach($organisations as $org){
+            /** @var $org Org */
             if(!$org->id) continue; //нулевую организацию не роутим
             // @todo if($org->ban) continue; // организация забанена
             $this->inbound.=$this->inbound($org);
@@ -73,6 +74,7 @@ class Ext extends CFormModel
 
         $peers = $org->peers;
         foreach($peers as $peer){
+            /** @var $peer Peers */
             //есди у пира нет конечных точек, то его вообще не маршрутизируем
             if(!$peer->usersCount) continue;
             if($peer->ban) continue;    //если забанен - продолжаем
@@ -84,6 +86,10 @@ class Ext extends CFormModel
     }
 
     //получить inbound Для конкретной организации
+    /**
+     * @param $org Org
+     * @return string
+     */
     private function inbound($org){
         $inbound = '';
 

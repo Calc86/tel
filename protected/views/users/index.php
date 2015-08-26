@@ -9,14 +9,16 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
     array('label'=>'Статистика звонков', 'url'=>array('stat/index', 'oid'=>$oid)),
+    array('label'=>'Входящий лог', 'url'=>array('log/inbound','oid'=>$oid)),
     array('label'=>'Управление'),
     array('label'=>'Добавить линию', 'url'=>array('create', 'oid'=>$oid)),
     array('label'=>'Добавить маршрут', 'url'=>array('dialOpts/create', 'oid'=>$oid)),
+    array('label'=>'Добавить оборудование', 'url'=>array('Devices/create', 'oid'=>$oid)),
     array('label'=>'Редактировать', 'url'=>array('org/view', 'id'=>$oid)),
     array('label'=>'Привязка по IP', 'url'=>array('orgIp/index', 'oid'=>$oid)),
     //array('label'=>'История', 'url'=>array('log/index','controller'=>Yii::app()->getController()->id)),
     array('label'=>'История', 'url'=>array('log/index')),
-    array('label'=>'Входящий лог', 'url'=>array('log/inbound','oid'=>$oid)),
+
 	//array('label'=>'Manage Users', 'url'=>array('admin')),
     //array('label'=>'Маршруты набора номера', 'url'=>array('dialOpts/index','oid'=>$oid)),
 );
@@ -76,7 +78,7 @@ $this->menu=array(
         array(  //ID
             'name'=>'id',
             'type'=>'raw',
-            'value'=>'CHtml::link($data->id,Yii::app()->createUrl("Peers/view",array("id"=>$data->primaryKey)))',
+            'value'=>'CHtml::link($data->id,Yii::app()->createUrl("OrgIp/view",array("id"=>$data->primaryKey)))',
         ),
         'ip',
         'mask'

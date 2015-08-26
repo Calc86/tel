@@ -15,7 +15,11 @@
  */
 class NumPool extends LogActiveRecord
 {
-	/**
+    protected function getCaching(){
+        return false;
+    }
+
+    /**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -121,4 +125,6 @@ class NumPool extends LogActiveRecord
         if ($this->isNewRecord)
             $this->dt = new CDbExpression('NOW()');
     }
+
+    public static $time = 0;
 }

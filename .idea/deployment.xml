@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action (Ctrl+S)" serverName="mxtel2">
+  <component name="PublishConfigData" autoUpload="On explicit save action (Ctrl+S)" serverName="mxtel2" showNewOnTargetInSync="false">
     <serverData>
       <paths name="mx.xsrv.ru">
         <serverdata>
@@ -36,6 +36,8 @@
             <excludedPath path="yii" />
             <excludedPath path="assets" />
             <excludedPath path="protected/runtime" />
+            <excludedPath path="install/etc/asterisk/bak" />
+            <excludedPath path="install/etc/asterisk/bak1" />
           </excludedPaths>
         </serverdata>
       </paths>

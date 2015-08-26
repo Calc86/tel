@@ -92,7 +92,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'context'); ?>
         <?php
-        $list = array("out1"=>"out1", "dialc"=>"dialc");
+        $list = array("out1"=>"out1", "dialc"=>"dialc", "deny"=>"deny");
         echo $form->dropDownList($model,'context',$list);
         ?>
 		<?php echo $form->error($model,'context'); ?>

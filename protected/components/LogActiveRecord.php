@@ -6,7 +6,8 @@
  * Time: 21:58
  */
 
-class LogActiveRecord extends CActiveRecord {
+//class LogActiveRecord extends CActiveRecord {
+class LogActiveRecord extends CacheActiveRecord {
 
     protected function getName($name=''){
         return $name."(".$this->getOldPrimaryKey().")";
