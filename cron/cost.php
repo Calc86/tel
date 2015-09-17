@@ -28,7 +28,11 @@ for($i=0;$i<$n;$i++) {
     $row = mysql_fetch_array($r);
     $id = $row['id'];
     $minute = ($row['cost']=='') ? 0 : $row['cost'];	// -1 - так и не определили стоимость звонка, нет в прайсе
-    $cost = round($minute/60 * $row['billsec'],2);	// сколько стоит
+    // посекундная тарификация
+    //$cost = round($minute/60 * $row['billsec'],2);	// сколько стоит
+    //поминутная тарификация 2015-09-11
+    $cost = round(ceil($row['billsec']/60) * $minute, 2);
+    // записать в таблицу
     $qu = "update stat set minute='$minute', cost='$cost' where id=$id limit 1";
     mysql_query($qu);
     //echo $qu."<br>";
