@@ -25,6 +25,12 @@
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
+    <div class="row">
+        <?php echo $form->labelEx($model,'group'); ?>
+        <?php echo $form->dropDownList($model,'group',CHtml::listData(OrgGroup::model()->findAll(),'id', 'name')); ?>
+        <?php echo $form->error($model,'group'); ?>
+    </div>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'login'); ?>
 		<?php echo $form->textField($model,'login',array('maxlength'=>255)); ?>

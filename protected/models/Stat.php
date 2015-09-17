@@ -192,4 +192,132 @@ class Stat extends LogActiveRecord
                 return substr($no,1);
         return $no;
     }
+
+    /**
+     * @param $oid
+     * @param int $date_start   старт, 0 - текущий месяц, -1 - прошлый месяц и т.д.
+     * @param int $date_end     стоп, 0 - текущий месяц, -1 прошлый месяц и т.д.
+     * @param int $cause        1 - только отвеченные
+     * @param int $out          1 - исходящие
+     * @param int $in           1 - входящие
+     * @return CDbCriteria
+     */
+    public static function generateCriteria($oid,$date_start=0,$date_end=0,$cause=1,$out=1,$in=0){
+        if(!$date_start)
+            $date_start = date('Y-m-01');
+
+        if(!$date_end)
+            $date_end = date('Y-m-t');
+
+        if($date_start < 0){
+            $m = date("m") + $date_start;
+            $date_start = date("Y-$m-01");
+        }
+        if($date_end < 0){
+            $m = date("m") + $date_end;
+            $date_end = date("Y-$m-t");
+        }
+
+
+        // in statement for sql query
+        $users = Users::model()->findAll('oid='.$oid);
+        $in_u = array();
+        $in_sip_u = array();
+        foreach($users as $user){
+            array_push($in_u,$user->intno);
+            array_push($in_sip_u,"SIP/".$user->intno);
+        }
+
+        $criteria = new CDbCriteria();
+
+        //общий запрос по организации
+        $criteria->addInCondition('ch',$in_sip_u);
+        $criteria->addInCondition('dstch',$in_sip_u,'OR');
+        $criteria->addInCondition('dst',$in_u,'OR');
+        $criteria->addInCondition('src',$in_u,'OR');
+
+        //критерий по дате
+        $criteria->addBetweenCondition('cd',$date_start." 00:00:00",$date_end." 23:59:59");
+        //критерий по статусу звонка, интересуют только отвеченные
+        if($cause) $criteria->addCondition("cause='ANSWERED'");
+        //критерий по нарправлению звонка
+        $direction = array('otr','itr','redir');
+        //if($out) $direction = array(/*'',*/'otr',/*'itr',*/'redir','out');
+        if($out) $direction = array_merge($direction,array('out'));
+        if($in)  $direction = array_merge($direction,array('in'));
+        $criteria->addInCondition('direction', $direction);
+
+        /*
+         * direction
+            Изменить	Удалить     -
+            Изменить	Удалить	in  +
+            Изменить	Удалить	itr -
+            Изменить	Удалить	otr +
+            Изменить	Удалить	out +
+            Изменить	Удалить	redir +
+         * itr - 7 записей за всё время
+         * '' - закончились в 2011-01-12 07:30:07
+         */
+
+        return $criteria;
+    }
+
+    public static function getStat(/*CDbCriteria*/ $criteria){
+
+    }
+
+    /**
+     * @param CDbCriteria $criteria
+     * @return CActiveDataProvider, data[0]
+     */
+    public static function getTotal(/*CDbCriteria*/ $criteria){
+        $criteria->select = "SUM(cost) as cost,SUM(billsec) as billsec, SUM(duration) as duration";
+        return $sumProvider=new CActiveDataProvider('Stat',
+            array(
+                'criteria' => $criteria,
+            )
+        );
+    }
+
+    /**
+     * @param CDbCriteria $criteria
+     * * @return CActiveDataProvider, data[0]
+     */
+    public static function getMoscow($criteria){
+        $criteria->select = "SUM(cost) as cost,SUM(billsec) as billsec, SUM(duration) as duration";
+        $criteria->addCondition('kod=495 OR kod=499');
+        return $sumProvider=new CActiveDataProvider('Stat',
+            array(
+                'criteria' => $criteria,
+            )
+        );
+    }
+
+    /**
+     * @param CDbCriteria $criteria
+     * * @return CActiveDataProvider, data[0]
+     */
+    public static function getSot($criteria){
+        $criteria->select = "SUM(cost) as cost,SUM(billsec) as billsec, SUM(duration) as duration";
+        $criteria->addCondition('kod like "9%"');
+        return $sumProvider=new CActiveDataProvider('Stat',
+            array(
+                'criteria' => $criteria,
+            )
+        );
+    }
+
+    /**
+     * @param CDbCriteria $criteria
+     * * @return CActiveDataProvider, data[0]
+     */
+    public static function getOther($criteria){
+        $criteria->select = "SUM(cost) as cost,SUM(billsec) as billsec, SUM(duration) as duration";
+        $criteria->addCondition('kod not like "9%" and kod != "495" and kod != "499"');
+        return $sumProvider=new CActiveDataProvider('Stat',
+            array(
+                'criteria' => $criteria,
+            )
+        );
+    }
 }

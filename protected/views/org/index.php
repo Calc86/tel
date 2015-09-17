@@ -34,8 +34,22 @@ $this->menu=array(
             'value'=>'CHtml::link($data->name,Yii::app()->createUrl("users/index",array("id"=>$data->primaryKey)))',
         ),
         'login',
-        //'money',
         'fullname',
+
+        array(
+            'filter' => CHtml::activeDropDownList($model,'group',array("-1" => "Все") + CHtml::listData(OrgGroup::model()->findAll(),'id', 'name'),array('unselectValue'=>'-1',/*'multiple'=>'multiple',*/'class'=>'select2')),
+            //'title'=>'intno',
+            'header'=>'group_name',
+            'type'=>'raw',
+            'value'=>'$data->group_name',
+        ),
+        'money',
+        /*array(
+            //'title'=>'intno',
+            'header'=>'peer',
+            'type'=>'raw',
+            'value'=>'$data->peer_list',
+        ),*/
         array(
             //'title'=>'intno',
             'header'=>'intno',

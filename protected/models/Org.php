@@ -10,6 +10,7 @@
  * @property string $passwd
  * @property string $hash
  * @property double $money
+ * @property double $group
  * @property string $fullname
  * @property Peers $peers
  * @property Users $users
@@ -21,6 +22,8 @@ class Org extends LogActiveRecord
 {
     public $user_list = '';
     public $peer_list = '';
+    public $group_name = '';
+    public $group_filter;
 
 	/**
 	 * @return string the associated database table name
@@ -48,6 +51,8 @@ class Org extends LogActiveRecord
 
         $this->peer_list = implode(', ', $p);
 
+        $this->group_name = OrgGroup::model()->findByPk($this->group)->name;
+
     }
 
     protected function getName($name=''){
@@ -62,15 +67,15 @@ class Org extends LogActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, login, passwd', 'required'),
+			array('name, login, passwd, group', 'required'),
             array('name, login', 'unique'),
 			//array('money', 'numerical'),
 			array('name, login, passwd, fullname', 'length', 'min'=>4, 'max'=>255),
-            array('name, login', 'match', 'pattern'=>'/^[A-z][\w]+$/'),
+            array('login', 'match', 'pattern'=>'/^[A-z][\w]+$/'),
 			//array('hash', 'length', 'max'=>50),
 			// The following rule is used by search().
 			//array('id, name, login, passwd, hash, money, fullname', 'safe', 'on'=>'search'),
-            array('name, login, fullname', 'safe', 'on'=>'search')
+            array('name, login, fullname, group', 'safe', 'on'=>'search')
 		);
 	}
 
@@ -88,6 +93,7 @@ class Org extends LogActiveRecord
             'users' => array(self::HAS_MANY, 'Users', 'oid'),
             'opts'  => array(self::HAS_MANY, 'DialOpts', 'oid'),
             'ip'=>array(self::HAS_MANY, 'OrgIp', 'org_id'),
+            //'group'=>array(self::HAS_ONE, 'OrgGroup', 'id'),
 		);
 	}
 
@@ -103,6 +109,7 @@ class Org extends LogActiveRecord
 			'passwd' => 'Пароль',
 			'hash' => 'Hash',
 			'money' => 'Money',
+            'group' => 'Группа',
 			'fullname' => 'Полное название организации',
 		);
 	}
@@ -127,6 +134,7 @@ class Org extends LogActiveRecord
 		//$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('login',$this->login,true);
+        if($this->group>=0)$criteria->compare('`group`',$this->group,false);
 		//$criteria->compare('passwd',$this->passwd,true);
 		//$criteria->compare('hash',$this->hash,true);
 		//$criteria->compare('money',$this->money);

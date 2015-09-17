@@ -48,6 +48,7 @@
                 array('label'=>'Asterisk', 'url'=>array('/asterisk/channels')),
                 array('label'=>'Оборудование', 'url'=>array('/devices/index')),
                 array('label'=>'Провайдеры', 'url'=>array('/pt/index')),
+                array('label'=>'Типы организаций', 'url'=>array('/orgGroup/index')),
                 array('label'=>'Номера', 'url'=>array('/numPool/index')),
                 array('label'=>'История', 'url'=>array('/log/index')),
                 array('label'=>'Коммерческие предложения', 'url'=>array('/orgList')),

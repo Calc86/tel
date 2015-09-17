@@ -22,6 +22,10 @@ return array(
 		'application.components.*',
 	),
 
+    /*'session' => array (
+        'autoStart' => false,
+    ),*/
+
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 
@@ -29,7 +33,7 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'qwertyui',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('10.112.28.19','10.112.28.33','127.0.0.1','::1'),
+			'ipFilters'=>array('10.112.28.19','10.112.28.33', '10.113.148.12','127.0.0.1','::1'),
             'generatorPaths' => array(
                 'bootstrap.gii'
             ),

@@ -274,3 +274,11 @@ tr.even td.registry.no{
 tr.odd td.registry.no{
     background-color: #FF6600;
 }
+
+tr.ban {
+    font-style: italic;
+}
+
+td.oid.ban {
+    text-decoration: line-through;
+}

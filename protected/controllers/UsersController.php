@@ -124,6 +124,7 @@ class UsersController extends Controller
 	public function actionIndex()
 	{
         $oid = Yii::app()->request->getQuery('id');
+        $org = Org::model()->findByPk($oid);
 
         $criteria = new CDbCriteria();
         $criteria->addCondition("t.oid=$oid");
@@ -209,6 +210,7 @@ class UsersController extends Controller
             'dataProviderIP'=>$dataProviderIP,
             'ast' =>$ast,
             'oid' => $oid,
+            'org' => $org,
 		));
 	}
 

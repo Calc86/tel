@@ -14,6 +14,8 @@
  * @property integer $nid
  * @property integer $ban
  * @property integer $call_limit
+ * @property integer $buy
+ * @property integer $sell
  */
 class Peers extends LogActiveRecord
 {
@@ -50,6 +52,7 @@ class Peers extends LogActiveRecord
 		// will receive user inputs.
 		return array(
 			array('oid, name, tel, host, username, secret, nid', 'required'),
+            array('buy, sell', 'safe'),
             array('name, tel', 'unique'),
 			array('oid, nid, ban, call_limit', 'numerical', 'integerOnly'=>true),
 			array('name, tel, host, username, secret', 'length', 'max'=>255),
@@ -93,6 +96,8 @@ class Peers extends LogActiveRecord
 			'nid' => 'Nid',
 			'ban' => 'Ban',
 			'call_limit' => 'Call Limit',
+            'buy' => 'Buy',
+            'sell' => 'Sell'
 		);
 	}
 

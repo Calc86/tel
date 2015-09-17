@@ -88,6 +88,18 @@
 		<?php echo $form->error($model,'call_limit'); ?>
 	</div>
 
+    <div class="row">
+        <?php echo $form->labelEx($model,'buy'); ?>
+        <?php echo $form->textField($model,'buy'); ?>
+        <?php echo $form->error($model,'buy'); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'sell'); ?>
+        <?php echo $form->textField($model,'sell'); ?>
+        <?php echo $form->error($model,'sell'); ?>
+    </div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

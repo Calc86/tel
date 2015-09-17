@@ -31,5 +31,7 @@ $this->menu=array(
 		'nid',
 		'ban',
 		'call_limit',
+        'buy',
+        'sell'
 	),
 )); ?>

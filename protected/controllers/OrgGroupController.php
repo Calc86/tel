@@ -1,14 +1,12 @@
 <?php
 
-class StatController extends Controller
+class OrgGroupController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
-
-    public $date_start;
 
 	/**
 	 * @return array action filters
@@ -31,16 +29,16 @@ class StatController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('@'),
+				'users'=>array('*'),
 			),
-			/*array('allow', // allow authenticated user to perform 'create' and 'update' actions
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
 				'users'=>array('@'),
-			),*/
-			/*array('allow', // allow admin user to perform 'admin' and 'delete' actions
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
-			),*/
+			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -64,14 +62,14 @@ class StatController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Stat;
+		$model=new OrgGroup;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Stat']))
+		if(isset($_POST['OrgGroup']))
 		{
-			$model->attributes=$_POST['Stat'];
+			$model->attributes=$_POST['OrgGroup'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -93,9 +91,9 @@ class StatController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Stat']))
+		if(isset($_POST['OrgGroup']))
 		{
-			$model->attributes=$_POST['Stat'];
+			$model->attributes=$_POST['OrgGroup'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -122,57 +120,11 @@ class StatController extends Controller
 	/**
 	 * Lists all models.
 	 */
-    // @todo переписать передачу параметров в этой функии, слишком много переменных
-	public function actionIndex($oid,$date_start=0,$date_end=0,$cause=1,$out=1,$in=0)
+	public function actionIndex()
 	{
-        //$oid = Yii::app()->request->getQuery('oid');
-
-        //отработка формы поиска
-        if(isset($_POST['date'])){
-            print_r($_POST);
-            //exit();
-
-            $this->redirect(
-                array('index',
-                    'oid'=>$oid,
-                    'date_start'=>$_POST['date']['start'],
-                    'date_end'=>$_POST['date']['end'],
-                    'cause'=>isset($_POST['date']['cause']) ? 1 : 0,
-                    'in'=>isset($_POST['date']['in']) ? 1 : 0,
-                    'out'=>isset($_POST['date']['out']) ? 1 : 0,
-                )
-            );
-        }
-
-        $criteria = Stat::generateCriteria($oid, $date_start, $date_end, $cause, $out, $in);
-
-		$dataProvider=new CActiveDataProvider('Stat',
-            array(
-                'criteria' => $criteria,
-                'sort'=>array(
-                    'defaultOrder'=>'cd DESC',
-                )
-            )
-        );
-        $dataProvider->pagination = false;
-
-        $criteriaTotal = clone $criteria;
-        /*$criteriaTotal->select = "SUM(cost) as cost,SUM(billsec) as billsec, SUM(duration) as duration";
-        $sumProvider=new CActiveDataProvider('Stat',
-            array(
-                'criteria' => $criteriaTotal,
-            )
-        );*/
-        $sumProvider = Stat::getTotal($criteriaTotal);
-
+		$dataProvider=new CActiveDataProvider('OrgGroup');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-            'date_start'=>$date_start,
-            'date_end'=>$date_end,
-            'cause'=>$cause,
-            'in'=>$in,
-            'out'=>$out,
-            'total'=>$sumProvider->data[0],
 		));
 	}
 
@@ -181,10 +133,10 @@ class StatController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Stat('search');
+		$model=new OrgGroup('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Stat']))
-			$model->attributes=$_GET['Stat'];
+		if(isset($_GET['OrgGroup']))
+			$model->attributes=$_GET['OrgGroup'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -195,12 +147,12 @@ class StatController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Stat the loaded model
+	 * @return OrgGroup the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Stat::model()->findByPk($id);
+		$model=OrgGroup::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -208,11 +160,11 @@ class StatController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Stat $model the model to be validated
+	 * @param OrgGroup $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='stat-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='org-group-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

@@ -2,6 +2,7 @@
 /* @var $this UsersController */
 /* @var $dataProvider CActiveDataProvider */
 /* @var $dataProviderIP CActiveDataProvider */
+/* @var $org Org */
 
 $this->breadcrumbs=array(
 	'Организация',
@@ -24,7 +25,11 @@ $this->menu=array(
 );
 ?>
 
-<h1>Линии</h1>
+<?php
+    $this->renderPartial('_card', array( 'org'=>$org ) );
+?>
+
+<h3>Линии</h3>
 
 <h6>Конечные точки</h6>
 <?php $this->widget('zii.widgets.grid.CGridView', array(

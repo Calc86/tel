@@ -23,10 +23,11 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'name',
+        'fullname',
+        'group_name',
 		'login',
 		'passwd',
 		'hash',
 		'money',
-		'fullname',
 	),
 )); ?>
